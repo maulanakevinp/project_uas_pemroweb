@@ -17,6 +17,7 @@
 	.kotak .input-group{
 		margin-bottom: 20px;
 	}
+	
 	.jarak{
         margin-left:10px;
     }
