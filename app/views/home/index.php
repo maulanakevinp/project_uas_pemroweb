@@ -1,7 +1,3 @@
-<?php
-include "header.php";
-?>
-
 <div class="container-fluid">
     <div class="row flex-xl-nowrap">
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar mt-3">
@@ -79,7 +75,3 @@ include "header.php";
         </main>
     </div>
 </div>
-
-<?php
-include "footer.php";
-?>
