@@ -1,18 +1,24 @@
-<?php 
+<?php
 
 /**
  * 
  */
-class User_model 
+class User_model
 {
-	private $nama = 'Kevin';
+	private $db;
+
 	function __construct()
 	{
-		# code...
+		$this->db = new Database;
 	}
 
-	public function getUser()
+	public function masuk($data)
 	{
-		return $this->nama;
+		$query = "SELECT * FROM users WHERE email = :email AND password = :password ";
+		$this->db->query($query);
+		$this->db->bind('email', $data['email']);
+		$this->db->bind('password', $data['password']);
+
+		return $this->db->single();
 	}
 }
