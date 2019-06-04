@@ -35,7 +35,7 @@ class User_model
 		$query = "SELECT * FROM users WHERE email = :email AND password = :password ";
 		$this->db->query($query);
 		$this->db->bind('email', $data['email']);
-		$this->db->bind('password', $data['password']);
+		$this->db->bind('password', md5($data['password']));
 
 		return $this->db->single();
 	}
@@ -54,7 +54,7 @@ class User_model
 		$this->db->query($query);
 		$this->db->bind('nama', $data['nama']);
 		$this->db->bind('email', $data['emaild']);
-		$this->db->bind('password', $data['passwordd']);
+		$this->db->bind('password', md5($data['passwordd']));
 
 		$this->db->execute();
 
