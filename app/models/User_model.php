@@ -47,4 +47,17 @@ class User_model
 		$this->db->bind('id', $id);
 		return $this->db->single();
 	}
+
+	public function daftar($data)
+	{
+		$query = "INSERT INTO users (nama,email,password,id_level_user)VALUES ( :nama , :email , :password , 2 )";
+		$this->db->query($query);
+		$this->db->bind('nama', $data['nama']);
+		$this->db->bind('email', $data['emaild']);
+		$this->db->bind('password', $data['passwordd']);
+
+		$this->db->execute();
+
+		return $this->db->rowCount();
+	}
 }

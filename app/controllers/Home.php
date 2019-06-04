@@ -30,6 +30,7 @@ class Home extends Controller
             header('Location: ' . BASEURL);
         } else {
             Flasher::setFlash('Gagal', 'Masuk', 'danger');
+            header('Location: ' . BASEURL);
             exit;
         }
     }
@@ -39,5 +40,20 @@ class Home extends Controller
         session_destroy();
         header('Location: ' . BASEURL);
         exit;
+    }
+
+    public function daftar()
+    {
+        if ($_POST['passwordd'] == $_POST['cpassword']) {
+            if ($this->model('User_model')->daftar($_POST) > 0) {
+                Flasher::setFlash('Berhasil', 'Daftar', 'success');
+                header('Location: ' . BASEURL);
+                exit;
+            }
+        } else {
+            Flasher::setFlash('Gagal', 'Daftar', 'danger');
+            header('Location: ' . BASEURL);
+            exit;
+        }
     }
 }

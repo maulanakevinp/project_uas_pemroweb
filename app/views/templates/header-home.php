@@ -40,6 +40,10 @@
 		</div>
 	</header>
 
+	<div class="container" style="margin-top: 100px;">
+		<?php Flasher::flash() ?>
+	</div>
+
 	<!-- Modal Masuk -->
 	<div class="modal fade" id="formMasuk" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -69,7 +73,6 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 						<button type="submit" class="btn btn-primary">Masuk</button>
-						<?php Flasher::flash() ?>
 					</div>
 				</form>
 			</div>
@@ -80,7 +83,7 @@
 	<div class="modal fade" id="formDaftar" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<form id="form" action="<?= BASEURL ?>/daftar" method="POST">
+				<form id="form" action="<?= BASEURL ?>/home/daftar" method="POST">
 					<div class="modal-header">
 						<h5 class="modal-title">Daftar</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -90,25 +93,25 @@
 					<div class="modal-body">
 						<div class="form-group">
 							<label for="nama">Nama Lengkap</label>
-							<input type="text" class="form-control" id="nama" name="nama">
+							<input type="text" class="form-control" id="nama" name="nama" required>
 						</div>
 						<div class="form-group">
 							<label for="email">Email</label>
-							<input type="text" class="form-control" id="emaild" name="emaild">
+							<input type="text" class="form-control" id="emaild" name="emaild" required>
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" id="passwordd" name="passwordd">
+							<input type="password" class="form-control" id="passwordd" name="passwordd" required>
 						</div>
 						<div class="form-group">
 							<label for="cpassword">Konfirmasi Password</label>
-							<input type="password" class="form-control" id="cpassword" name="cpassword">
+							<input type="password" class="form-control" id="cpassword" name="cpassword" required>
 						</div>
 						<a class="btn-link" href="" data-toggle="modal" data-target="#formMasuk" data-dismiss="modal">Sudah Punya Akun?</a>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-						<button type="submit" class="btn btn-primary">Masuk</button>
+						<button type="submit" class="btn btn-primary">Daftar</button>
 					</div>
 				</form>
 			</div>
