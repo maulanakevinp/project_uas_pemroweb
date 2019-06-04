@@ -6,17 +6,6 @@
 class User_model
 {
 	private $db;
-	private $id = 0;
-
-	public function getId()
-	{
-		return $this->id;
-	}
-
-	public function setId($id)
-	{
-		$this->id = $id;
-	}
 
 	function __construct()
 	{
