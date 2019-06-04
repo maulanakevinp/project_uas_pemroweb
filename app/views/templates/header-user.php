@@ -5,7 +5,6 @@
 	<title><?= $data['judul']; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/css/bootstrap.css">
 	<link rel="shortcut icon" href="<?= BASEURL ?>/img/logo/logo-manen.in.jpg">
-
 </head>
 
 <body>
@@ -38,7 +37,7 @@
 			</a>
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item dropdown ">
-					<a class="nav-link dropdown-toggle" href="#" id="akun" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">profil</a>
+					<a class="nav-link dropdown-toggle" href="#" id="akun" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black"><?= $data['user']['nama'] ?></a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="akun">
 						<a class="dropdown-item" href="#">Profil</a>
 						<a class="dropdown-item" href="#">Pengaturan</a>
