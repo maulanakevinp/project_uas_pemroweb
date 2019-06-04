@@ -44,7 +44,7 @@
 	<div class="modal fade" id="formMasuk" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<form id="form" action="<?= BASEURL; ?>/user/masuk" method="POST">
+				<form id="form" action="<?= BASEURL; ?>/home/masuk" method="POST">
 
 					<div class="modal-header">
 						<h5 class="modal-title">Masuk</h5>
@@ -56,11 +56,11 @@
 					<div class="modal-body">
 						<div class="form-group">
 							<label for="email">Email</label>
-							<input type="text" class="form-control" id="email" name="email">
+							<input type="text" class="form-control" id="email" name="email" required>
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" id="password" name="password">
+							<input type="password" class="form-control" id="password" name="password" required>
 						</div>
 						<a class="btn-link" href="" data-toggle="modal" data-target="#formDaftar" data-dismiss="modal">Tidak Punya Akun?</a>
 						<a class="btn-link float-right" href="" data-toggle="modal" data-target="#formLupa" data-dismiss="modal">Lupa Password?</a>

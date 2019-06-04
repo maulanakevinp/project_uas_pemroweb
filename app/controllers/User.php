@@ -3,15 +3,22 @@ class User extends Controller
 {
     public function index()
     {
-        $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
-        // $data['nama'] = $this->model('User_model')->getUser();
-        $this->view('templates/header-user', $data);
-        $this->view('home/index');
-        $this->view('templates/footer');
+        if ($_SESSION['status'] == "login") {
+            $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+            $this->view('templates/header-user', $data);
+            $this->view('home/index');
+            $this->view('templates/footer');
+        } else if ($_SESSION['status'] == "keluar") {
+            header('Location: ' . BASEURL);
+            exit;
+        }
     }
 
-    public function masuk()
+    public function keluar()
     {
-        header('Location: ' . BASEURL . '/user');
+        session_destroy();
+        $_SESSION['status'] == "keluar";
+        header('Location: ' . BASEURL);
+        exit;
     }
 }

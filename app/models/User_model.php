@@ -12,7 +12,14 @@ class User_model
 		$this->db = new Database;
 	}
 
-	public function masuk($data)
+	public function getAll()
+	{
+		$query = "SELECT * FROM users";
+		$this->db->query($query);
+		return $this->db->resultSet();
+	}
+
+	public function login($data)
 	{
 		$query = "SELECT * FROM users WHERE email = :email AND password = :password ";
 		$this->db->query($query);

@@ -42,7 +42,7 @@
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="akun">
 						<a class="dropdown-item" href="#">Profil</a>
 						<a class="dropdown-item" href="#">Pengaturan</a>
-						<a class="dropdown-item" href="<?= BASEURL ?>/" onclick="return confirm('Anda yakin ingin keluar ?');">Keluar</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>/user/keluar" onclick="return confirm('Anda yakin ingin keluar ?');">Keluar</a>
 					</div>
 				</li>
 			</ul>
