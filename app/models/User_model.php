@@ -40,11 +40,11 @@ class User_model
 		return $this->db->single();
 	}
 
-	public function getUserById($id)
+	public function getUserByEmail($email)
 	{
-		$query = "SELECT * FROM users WHERE id = :id";
+		$query = "SELECT * FROM users WHERE email = :email";
 		$this->db->query($query);
-		$this->db->bind('id', $id);
+		$this->db->bind('email', $email);
 		return $this->db->single();
 	}
 

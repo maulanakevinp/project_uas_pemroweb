@@ -8,9 +8,9 @@ class Home extends Controller
 
     public function index()
     {
-        if (isset($_SESSION['id'])) {
+        if (isset($_SESSION['email'])) {
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
-            $data['user'] = $this->model('User_model')->getUserById($_SESSION['id']);
+            $data['user'] = $this->model('User_model')->getUserByEmail($_SESSION['email']);
             $this->view('templates/header-user', $data);
             $this->view('home/index');
             $this->view('templates/footer');
@@ -25,8 +25,8 @@ class Home extends Controller
     public function masuk()
     {
         $data['user'] = $this->model('User_model')->login($_POST);
-        if (isset($data['user']['id'])) {
-            $_SESSION["id"] = $data['user']['id'];
+        if (isset($data['user']['email'])) {
+            $_SESSION["email"] = $data['user']['email'];
             header('Location: ' . BASEURL);
         } else {
             Flasher::setFlash('Gagal', 'Masuk', 'danger');
@@ -52,6 +52,19 @@ class Home extends Controller
             }
         } else {
             Flasher::setFlash('Gagal', 'Daftar', 'danger');
+            header('Location: ' . BASEURL);
+            exit;
+        }
+    }
+
+    public function lupa()
+    {
+        if ($this->model('User_model')->getUserByEmail($_POST['emaill']) > 0) {
+            Flasher::setFlash('Berhasil', 'Silahkan Cek Email', 'success');
+            header('Location: ' . BASEURL);
+            exit;
+        } else {
+            Flasher::setFlash('Gagal', 'Anda Bukan User', 'danger');
             header('Location: ' . BASEURL);
             exit;
         }
