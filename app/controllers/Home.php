@@ -11,12 +11,13 @@ class Home extends Controller
         if (isset($_SESSION['email'])) {
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByEmail($_SESSION['email']);
-            $this->view('templates/header-user', $data);
+            $_SESSION['nama'] = $data['user']['nama'];
+            $this->view('templates/header', $data);
             $this->view('home/index');
             $this->view('templates/footer');
         } else {
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
-            $this->view('templates/header-home', $data);
+            $this->view('templates/header', $data);
             $this->view('home/index');
             $this->view('templates/footer');
         }

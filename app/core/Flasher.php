@@ -2,6 +2,34 @@
 
 class Flasher
 {
+
+
+    public static function header()
+    {
+        if (isset($_SESSION['nama'])) {
+            $nama = $_SESSION['nama'];
+            $profil = BASEURL . "/profil";
+            $panenku = BASEURL . "/panenku";
+            $pengaturan = BASEURL . "/pengaturan";
+            $keluar = BASEURL . "/home/keluar";
+
+            echo "<ul class='nav nav-pills mr-auto'>
+				<li class='nav-item dropdown '>
+					<a class='nav-link dropdown-toggle' href='#' id='akun' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>$nama</a>
+					<div class='dropdown-menu dropdown-menu-right mt-2' aria-labelledby='akun'>
+                        <a class='dropdown-item' href='$profil'>Profil</a>
+                        <a class='dropdown-item' href='$panenku'>Panenku</a>
+                        <a class='dropdown-item' href='$pengaturan'>Pengaturan</a>
+                        <div class='dropdown-divider'></div>
+						<a class='dropdown-item' href='$keluar'>Keluar</a>
+					</div>
+				</li>
+			</ul>";
+        } else {
+            echo "<a class='btn btn-outline-primary' href='#' data-toggle='modal' data-target='#formMasuk'>Masuk</a>";
+        }
+    }
+
     public static function setFlash($pesan, $aksi, $tipe)
     {
         $_SESSION['flash'] = [

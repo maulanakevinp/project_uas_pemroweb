@@ -23,20 +23,18 @@
 					<button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
 				</div>
 			</div>
-			<ul class="navbar-nav mr-auto">
+			<ul class="nav nav-pills mr-1 ml-1">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="kategori" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">Kategori</a>
-					<div class="dropdown-menu" aria-labelledby="kategori">
-						<a class="dropdown-item" href="#">Sektor Pertanian</a>
-						<a class="dropdown-item" href="#">Sektor Perkebunan</a>
-						<a class="dropdown-item" href="#">Sektor Tanaman</a>
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kategori</a>
+					<div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="kategori">
+						<a class="dropdown-item" href="#">Sayuran</a>
+						<a class="dropdown-item" href="#">Buah-Buahan</a>
+						<a class="dropdown-item" href="#">Beras dan Biji-Bijian</a>
 					</div>
 				</li>
 			</ul>
-			<a class="nav-link" href="">
-				<img src="<?= BASEURL ?>/img/icon/icons8_shopping_basket_2_50px.png" alt="">
-			</a>
-			<a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#formMasuk">Masuk</a>
+			<?php Flasher::header() ?>
+
 		</div>
 	</header>
 
