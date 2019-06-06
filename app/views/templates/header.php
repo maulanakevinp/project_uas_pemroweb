@@ -57,8 +57,8 @@
 
 					<div class="modal-body">
 						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="text" class="form-control" id="email" name="email" required>
+							<label for="email">Email atau Username</label>
+							<input type="text" class="form-control" id="email-username" name="email-username" required>
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>

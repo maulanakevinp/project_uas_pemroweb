@@ -1,17 +1,14 @@
 <?php
-
 class Home extends Controller
 {
-
     public function __construct()
     { }
-
     public function index()
     {
         if (isset($_SESSION['email'])) {
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByEmail($_SESSION['email']);
-            $_SESSION['nama'] = $data['user']['nama'];
+            $_SESSION['nama'] = $data['user']['username'];
             $this->view('templates/header', $data);
             $this->view('home/index');
             $this->view('templates/footer');
@@ -22,7 +19,6 @@ class Home extends Controller
             $this->view('templates/footer');
         }
     }
-
     public function masuk()
     {
         $data['user'] = $this->model('User_model')->login($_POST);
@@ -35,14 +31,12 @@ class Home extends Controller
             exit;
         }
     }
-
     public function keluar()
     {
         session_destroy();
         header('Location: ' . BASEURL);
         exit;
     }
-
     public function daftar()
     {
         if ($_POST['passwordd'] == $_POST['cpassword']) {
@@ -57,7 +51,6 @@ class Home extends Controller
             exit;
         }
     }
-
     public function lupa()
     {
         if ($this->model('User_model')->getUserByEmail($_POST['emaill']) > 0) {
