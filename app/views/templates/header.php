@@ -3,8 +3,8 @@
 
 <head>
 	<title><?= $data['judul']; ?></title>
-	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/css/bootstrap.css">
-	<link rel="shortcut icon" href="<?= BASEURL ?>/img/logo/logo-manen.in.jpg">
+	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/assets/css/bootstrap.css">
+	<link rel="shortcut icon" href="<?= BASEURL ?>/assets/img/logo/logo-manen.in.jpg">
 
 </head>
 
@@ -13,7 +13,7 @@
 		<h5 class="my-0 mr-md-auto font-weight-normal"><a href="<?= BASEURL ?>" class="nav-link">Manenin</a></h5>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
 			<span>
-				<img class="btn btn-light" src="<?= BASEURL ?>/img/icon/icons8_menu_filled_30px.png" alt="">
+				<img class="btn btn-light" src="<?= BASEURL ?>/assets/img/icon/icons8_menu_filled_30px.png" alt="">
 			</span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbars">

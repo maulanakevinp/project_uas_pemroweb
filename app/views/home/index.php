@@ -3,17 +3,17 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <center>
-                    <img src="<?= BASEURL ?>/img/picture/sayuran_20180619_101443.jpg" alt="" width="500px" height="300px">
+                    <img src="<?= BASEURL ?>/assets/img/picture/sayuran_20180619_101443.jpg" alt="" width="500px" height="300px">
                 </center>
             </div>
             <div class="carousel-item">
                 <center>
-                    <img src="<?= BASEURL ?>/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="500px" height="300px">
+                    <img src="<?= BASEURL ?>/assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="500px" height="300px">
                 </center>
             </div>
             <div class="carousel-item">
                 <center>
-                    <img src="<?= BASEURL ?>/img/picture/beras-dan-biji-bijian.jpg" alt="" width="500px" height="300px">
+                    <img src="<?= BASEURL ?>/assets/img/picture/beras-dan-biji-bijian.jpg" alt="" width="500px" height="300px">
                 </center>
             </div>
         </div>
@@ -32,13 +32,13 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="<?= BASEURL ?>/img/picture/sayuran_20180619_101443.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/sayuran_20180619_101443.jpg" alt="" width="300px" height="200px">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= BASEURL ?>/img/picture/cucumbers-849269__340.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/cucumbers-849269__340.jpg" alt="" width="300px" height="200px">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= BASEURL ?>/img/picture/carrots-2387394__340.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/carrots-2387394__340.jpg" alt="" width="300px" height="200px">
                             </div>
                         </div>
                     </div>
@@ -53,13 +53,13 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="<?= BASEURL ?>/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="300px" height="200px">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= BASEURL ?>/img/picture/leci.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/leci.jpg" alt="" width="300px" height="200px">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= BASEURL ?>/img/picture/nanas.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/nanas.jpg" alt="" width="300px" height="200px">
                             </div>
                         </div>
                     </div>
@@ -74,13 +74,13 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="<?= BASEURL ?>/img/picture/beras-dan-biji-bijian.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/beras-dan-biji-bijian.jpg" alt="" width="300px" height="200px">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= BASEURL ?>/img/picture/images.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/images.jpg" alt="" width="300px" height="200px">
                             </div>
                             <div class="carousel-item">
-                                <img src="<?= BASEURL ?>/img/picture/download.jpg" alt="" width="300px" height="200px">
+                                <img src="<?= BASEURL ?>/assets/img/picture/download.jpg" alt="" width="300px" height="200px">
                             </div>
                         </div>
                     </div>
