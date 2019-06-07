@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="<?= $data['user']['alamat'] ?>">
+                                <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $data['user']['alamat'] ?>">
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>

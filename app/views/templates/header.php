@@ -23,10 +23,10 @@
 					<button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
 				</div>
 			</div>
-			<ul class="nav nav-pills mr-1 ml-1">
+			<ul class="nav nav-pills navbar-nav mr-1 ml-1">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kategori</a>
-					<div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="kategori">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Kategori</a>
+					<div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="kategori">
 						<a class="dropdown-item" href="#">Sayuran</a>
 						<a class="dropdown-item" href="#">Buah-Buahan</a>
 						<a class="dropdown-item" href="#">Beras dan Biji-Bijian</a>

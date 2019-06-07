@@ -9,6 +9,7 @@ class Home extends Controller
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
             $_SESSION['username'] = $data['user']['username'];
+            $_SESSION['foto'] = $data['user']['foto'];
             $this->view('templates/header', $data);
             $this->view('home/index');
             $this->view('templates/footer');

@@ -8,14 +8,18 @@ class Flasher
     {
         if (isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
+            $foto = $_SESSION['foto'];
+            $fotoprofil = BASEURL . "/app/models/foto/$foto";
             $profil = BASEURL . "/profil";
             $panenku = BASEURL . "/panenku";
             $pengaturan = BASEURL . "/pengaturan";
             $keluar = BASEURL . "/home/keluar";
 
-            echo "<ul class='nav nav-pills mr-auto'>
+            echo "<ul class='nav nav-pills navbar-nav mr-auto'>
 				<li class='nav-item dropdown '>
-					<a class='nav-link dropdown-toggle' href='#' id='akun' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>$username</a>
+                    <a class='nav-link dropdown-toggle' href='#' id='akun' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' style='color:black'>
+                    <img class = 'mr-2' src='$fotoprofil' width = '30px' height = '30px'>$username
+                    </a>
 					<div class='dropdown-menu dropdown-menu-right mt-2' aria-labelledby='akun'>
                         <a class='dropdown-item' href='$profil'>Profil</a>
                         <a class='dropdown-item' href='$panenku'>Panenku</a>

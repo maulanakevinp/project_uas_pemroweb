@@ -2,27 +2,26 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md">
-				<img class="mb-2" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-				<small class="d-block mb-3 text-muted">&copy; 2018-2019</small>
+				<center>
+					<img class="mb-2" src="<?= BASEURL ?>/assets/img/logo/logo.png" alt="" width="100" height="80">
+					<small class="d-block mb-3 text-muted">Tempat jual beli hasil panen yang tepat</small>
+				</center>
 			</div>
 			<div class="col-6 col-md">
-				<h5>Features</h5>
+				<h5>Manenin</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Cool stuff</a></li>
-					<li><a class="text-muted" href="#">Random feature</a></li>
-					<li><a class="text-muted" href="#">Team feature</a></li>
-					<li><a class="text-muted" href="#">Stuff for developers</a></li>
-					<li><a class="text-muted" href="#">Another one</a></li>
-					<li><a class="text-muted" href="#">Last time</a></li>
+					<li><a class="text-muted" href="#">Pusat Bantuan</a></li>
+					<li><a class="text-muted" href="#">Syarat & Ketentuan</a></li>
+					<li><a class="text-muted" href="#">Kebijakan Privasi</a></li>
+					<li><a class="text-muted" href="#">Cara Menggunakan Manenin</a></li>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
-				<h5>Resources</h5>
+				<h5>Social Media</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Resource</a></li>
-					<li><a class="text-muted" href="#">Resource name</a></li>
-					<li><a class="text-muted" href="#">Another resource</a></li>
-					<li><a class="text-muted" href="#">Final resource</a></li>
+					<a class="text-muted" href="https:/www.facebook.com/"><img src="<?= BASEURL ?>/assets/img/icon/icons8_Facebook_Old_50px.png" alt=""></a>
+					<a class="text-muted" href="https:/www.instagram.com/"><img src="<?= BASEURL ?>/assets/img/icon/icons8_instagram_new_50px.png" alt=""></a>
+					<a class="text-muted" href="https:/www.twitter.com"><img src="<?= BASEURL ?>/assets/img/icon/icons8_twitter_50px.png" alt=""></a>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
