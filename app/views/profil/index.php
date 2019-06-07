@@ -2,7 +2,7 @@
     <div class="card">
         <h5 class="card-header">Profil</h5>
         <div class="card-body">
-            <div class="mb-3 img-thumbnail" style="width: 100%; height: 200px;">
+            <div class="mb-3" style="width: 100%; height: 200px;">
                 <img src="<?= BASEURL ?>/app/models/cover/<?= $data['user']['cover'] ?>" alt="cover" width="100%" height="200px">
             </div>
             <div class="float-left mr-3" style="width: 20%; height: 200px;">
