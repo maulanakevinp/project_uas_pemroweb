@@ -6,8 +6,8 @@ class Flasher
 
     public static function header()
     {
-        if (isset($_SESSION['nama'])) {
-            $nama = $_SESSION['nama'];
+        if (isset($_SESSION['username'])) {
+            $username = $_SESSION['username'];
             $profil = BASEURL . "/profil";
             $panenku = BASEURL . "/panenku";
             $pengaturan = BASEURL . "/pengaturan";
@@ -15,7 +15,7 @@ class Flasher
 
             echo "<ul class='nav nav-pills mr-auto'>
 				<li class='nav-item dropdown '>
-					<a class='nav-link dropdown-toggle' href='#' id='akun' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>$nama</a>
+					<a class='nav-link dropdown-toggle' href='#' id='akun' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>$username</a>
 					<div class='dropdown-menu dropdown-menu-right mt-2' aria-labelledby='akun'>
                         <a class='dropdown-item' href='$profil'>Profil</a>
                         <a class='dropdown-item' href='$panenku'>Panenku</a>

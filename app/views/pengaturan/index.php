@@ -1,4 +1,5 @@
 <div class="container">
+    <?php Flasher::flash() ?>
     <div class="card">
         <h5 class="card-header">
             Pengaturan Akun
@@ -7,24 +8,77 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="ubah-detail-kontak" data-toggle="tab" href="#nav-ubah-detail-kontak" role="tab" aria-controls="nav-ubah-detail-kontak" aria-selected="true">Ubah detail kontak</a>
-                    <a class="nav-item nav-link" id="ubah-detail-profil" data-toggle="tab" href="#nav-ubah-detail-profil" role="tab" aria-controls="nav-ubah-detail-profil" aria-selected="false">Ubah detail profil</a>
+                    <a class="nav-item nav-link" id="ubah-detail-profil" data-toggle="tab" href="#nav-ubah-foto-profil" role="tab" aria-controls="nav-ubah-foto-profil" aria-selected="false">Ubah foto profil</a>
+                    <a class="nav-item nav-link" id="ubah-detail-profil" data-toggle="tab" href="#nav-ubah-cover-profil" role="tab" aria-controls="nav-ubah-cover-profil" aria-selected="false">Ubah cover profil</a>
                     <a class="nav-item nav-link" id="ubah-password" data-toggle="tab" href="#nav-ubah-password" role="tab" aria-controls="nav-ubah-password" aria-selected="false">Ubah password</a>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-ubah-detail-kontak" role="tabpanel" aria-labelledby="ubah-detail-kontak">
                     <div class="container mt-2">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <form action="<?= BASEURL ?>/pengaturan/ubahDetailKontak" method="post">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="username" class="form-control" id="username" name="username" value="<?= $data['user']['username'] ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="nomor_telepon">Nomor telepon</label>
+                                <input type="number" class="form-control" id="nomor_telepon" name="nomor_telepon" value="<?= $data['user']['nomor_telepon'] ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="<?= $data['user']['alamat'] ?>">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </form>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-ubah-detail-profil" role="tabpanel" aria-labelledby="ubah-detail-profil">
+                <div class="tab-pane fade" id="nav-ubah-foto-profil" role="tabpanel" aria-labelledby="ubah-foto-profil">
                     <div class="container mt-2">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <form action="<?= BASEURL ?>/pengaturan/ubahFotoProfil" enctype="multipart/form-data" method="post">
+                            <div class="mb-3 rounded-circle" style="width: 120px; height: 120px; background:url('https://avatar.olx.biz.id/BF9C/49052/5925094_4_256x256_1495095625.jpg'); background-size: 120px 120px">
+                                <img class="rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="form-group">
+                                <input type="file" name="foto" class="form-control-file" id="foto">
+                                <p>Upload photo profil anda untuk menambah nilai kepercayaan pembeli</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-ubah-cover-profil" role="tabpanel" aria-labelledby="ubah-cover-profil">
+                    <div class="container mt-2">
+                        <form action="<?= BASEURL ?>/pengaturan/ubahCoverProfil" enctype="multipart/form-data" method="post">
+
+                            <div class="mb-3 " style="width: 100%; height: 200px; background:url('<?= BASEURL ?>/assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg');">
+                                <img src="<?= BASEURL ?>/app/models/cover/<?= $data['user']['cover'] ?>" alt="" width="100%" height="200px">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control-file" type="file" name="cover" id="cover">
+                                <p>Upload cover profil anda untuk menambah nilai kepercayaan pembeli</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </form>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-ubah-password" role="tabpanel" aria-labelledby="ubah-password">
                     <div class="container mt-2">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <form action="<?= BASEURL ?>/pengaturan/ubahPassword" method="post">
+                            <div class="form-group">
+                                <label for="password">Password Lama</label>
+                                <input type="password" class="form-control" id="passwordl" name="passwordl" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password Baru</label>
+                                <input type="password" class="form-control" id="passwordb" name="passwordb">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpassword">Ulangi Password</label>
+                                <input type="password" class="form-control" id="cpassword" name="cpassword">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </form>
                     </div>
                 </div>
             </div>

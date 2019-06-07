@@ -90,8 +90,8 @@
 					</div>
 					<div class="modal-body">
 						<div class="form-group">
-							<label for="nama">Nama Lengkap</label>
-							<input type="text" class="form-control" id="nama" name="nama" required>
+							<label for="username">Nama Lengkap</label>
+							<input type="text" class="form-control" id="username" name="username" required>
 						</div>
 						<div class="form-group">
 							<label for="email">Email</label>

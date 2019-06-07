@@ -5,10 +5,10 @@ class Home extends Controller
     { }
     public function index()
     {
-        if (isset($_SESSION['email'])) {
+        if (isset($_SESSION['id'])) {
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
-            $data['user'] = $this->model('User_model')->getUserByEmail($_SESSION['email']);
-            $_SESSION['nama'] = $data['user']['username'];
+            $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
+            $_SESSION['username'] = $data['user']['username'];
             $this->view('templates/header', $data);
             $this->view('home/index');
             $this->view('templates/footer');
@@ -19,11 +19,12 @@ class Home extends Controller
             $this->view('templates/footer');
         }
     }
+
     public function masuk()
     {
         $data['user'] = $this->model('User_model')->login($_POST);
-        if (isset($data['user']['email'])) {
-            $_SESSION["email"] = $data['user']['email'];
+        if (isset($data['user']['id'])) {
+            $_SESSION['id'] = $data['user']['id'];
             header('Location: ' . BASEURL);
         } else {
             Flasher::setFlash('Gagal', 'Masuk', 'danger');
@@ -31,12 +32,14 @@ class Home extends Controller
             exit;
         }
     }
+
     public function keluar()
     {
         session_destroy();
         header('Location: ' . BASEURL);
         exit;
     }
+
     public function daftar()
     {
         if ($_POST['passwordd'] == $_POST['cpassword']) {
@@ -51,6 +54,7 @@ class Home extends Controller
             exit;
         }
     }
+
     public function lupa()
     {
         if ($this->model('User_model')->getUserByEmail($_POST['emaill']) > 0) {
