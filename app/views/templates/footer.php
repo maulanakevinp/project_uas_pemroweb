@@ -10,7 +10,7 @@
 			<div class="col-6 col-md">
 				<h5>Manenin</h5>
 				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Pusat Bantuan</a></li>
+					<li><a class="text-muted" href="<?= BASEURL ?>/pusat_bantuan">Pusat Bantuan</a></li>
 					<li><a class="text-muted" href="#">Syarat & Ketentuan</a></li>
 					<li><a class="text-muted" href="#">Kebijakan Privasi</a></li>
 					<li><a class="text-muted" href="#">Cara Menggunakan Manenin</a></li>
