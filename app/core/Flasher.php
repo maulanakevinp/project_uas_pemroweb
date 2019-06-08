@@ -3,7 +3,6 @@
 class Flasher
 {
 
-
     public static function header()
     {
         if (isset($_SESSION['username'])) {

@@ -8,6 +8,7 @@ class Profil extends Controller
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
             $_SESSION['username'] = $data['user']['username'];
+            $_SESSION['foto'] = $data['user']['foto'];
             $data['user']['created_at'] = $this->tgl_indo($data['user']['created_at']);
             $data['user']['updated_at'] = $this->tgl_indo($data['user']['updated_at']);
             $this->view('templates/header', $data);

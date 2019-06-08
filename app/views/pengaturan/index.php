@@ -36,14 +36,24 @@
                 <div class="tab-pane fade" id="nav-ubah-foto-profil" role="tabpanel" aria-labelledby="ubah-foto-profil">
                     <div class="container mt-2">
                         <form action="<?= BASEURL ?>/pengaturan/ubahFotoProfil" enctype="multipart/form-data" method="post">
-                            <div class="mb-3 rounded-circle" style="width: 120px; height: 120px; background:url('https://avatar.olx.biz.id/BF9C/49052/5925094_4_256x256_1495095625.jpg'); background-size: 120px 120px">
-                                <img class="rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
+                            <center>
+                                <div class="mb-3 rounded-circle" style="width: 200px; height: 200px; background:url('https://avatar.olx.biz.id/BF9C/49052/5925094_4_256x256_1495095625.jpg'); background-size: 120px 120px">
+                                    <img class="rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>Upload foto profil anda untuk menambah nilai kepercayaan pembeli</p>
+                                </div>
+                            </center>
+
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="foto" name="foto" aria-describedby="foto" required>
+                                    <label class="custom-file-label" for="foto">Pilih Foto</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit" id="foto">Updload</button>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="file" name="foto" class="form-control-file" id="foto">
-                                <p>Upload photo profil anda untuk menambah nilai kepercayaan pembeli</p>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>
@@ -54,11 +64,18 @@
                             <div class="mb-3 " style="width: 100%; height: 200px; background:url('<?= BASEURL ?>/assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg');">
                                 <img src="<?= BASEURL ?>/app/models/cover/<?= $data['user']['cover'] ?>" alt="" width="100%" height="200px">
                             </div>
-                            <div class="form-group">
-                                <input class="form-control-file" type="file" name="cover" id="cover">
+                            <div>
                                 <p>Upload cover profil anda untuk menambah nilai kepercayaan pembeli</p>
                             </div>
-                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="cover" name="cover" aria-describedby="cover" required>
+                                    <label class="custom-file-label" for="cover">Pilih Cover</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit" id="cover">Upload</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

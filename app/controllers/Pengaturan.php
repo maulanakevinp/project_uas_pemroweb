@@ -8,6 +8,7 @@ class Pengaturan extends Controller
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
             $_SESSION['username'] = $data['user']['username'];
+            $_SESSION['foto'] = $data['user']['foto'];
             $this->view('templates/header', $data);
             $this->view('pengaturan/index', $data);
             $this->view('templates/footer');

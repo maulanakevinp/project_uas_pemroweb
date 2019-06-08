@@ -69,24 +69,20 @@ class User_model
 	{
 		$data['user'] = $this->getUserByid($_SESSION['id']);
 
-		$destination_path = getcwd() . DIRECTORY_SEPARATOR . '/app/models/foto/';
-
 		$lokasi_file = $file['foto']['tmp_name'];
 		$nama_file   = $file['foto']['name'];
-		$direktori   = $destination_path . basename("$nama_file");
+		$direktori   = './app/models/foto/' . $nama_file;
 
 		$query = "UPDATE users SET foto = :foto WHERE id = :id";
 
-		if (file_exists("foto/" . $data['user']['foto'])) {
-			if (!empty($lokasi_file)) {
-				unlink("foto/" . $data['user']['foto']);
-				move_uploaded_file($lokasi_file, $direktori);
-				$this->db->query($query);
-				$this->db->bind('foto', $nama_file);
-				$this->db->bind('id', $_SESSION['id']);
-				$this->db->execute();
-				return $this->db->rowCount();
-			}
+		if (file_exists('./app/models/foto/' . $data['user']['foto'])) {
+			unlink('./app/models/foto/' . $data['user']['foto']);
+			move_uploaded_file($lokasi_file, $direktori);
+			$this->db->query($query);
+			$this->db->bind('foto', $nama_file);
+			$this->db->bind('id', $_SESSION['id']);
+			$this->db->execute();
+			return $this->db->rowCount();
 		} else {
 			move_uploaded_file($lokasi_file, $direktori);
 			$this->db->query($query);
@@ -101,24 +97,20 @@ class User_model
 	{
 		$data['user'] = $this->getUserByid($_SESSION['id']);
 
-		$destination_path = getcwd() . DIRECTORY_SEPARATOR . '/app/models/cover/';
-
 		$lokasi_file = $cover['cover']['tmp_name'];
 		$nama_file   = $cover['cover']['name'];
-		$direktori   = $destination_path . basename("$nama_file");
+		$direktori   = './app/models/cover/' . $nama_file;
 
 		$query = "UPDATE users SET cover = :cover WHERE id = :id";
 
-		if (file_exists("cover/" . $data['user']['cover'])) {
-			if (!empty($lokasi_file)) {
-				unlink("cover/" . $data['user']['cover']);
-				move_uploaded_file($lokasi_file, $direktori);
-				$this->db->query($query);
-				$this->db->bind('cover', $nama_file);
-				$this->db->bind('id', $_SESSION['id']);
-				$this->db->execute();
-				return $this->db->rowCount();
-			}
+		if (file_exists('./app/models/cover/' . $data['user']['cover'])) {
+			unlink('./app/models/cover/' . $data['user']['cover']);
+			move_uploaded_file($lokasi_file, $direktori);
+			$this->db->query($query);
+			$this->db->bind('cover', $nama_file);
+			$this->db->bind('id', $_SESSION['id']);
+			$this->db->execute();
+			return $this->db->rowCount();
 		} else {
 			move_uploaded_file($lokasi_file, $direktori);
 			$this->db->query($query);
