@@ -28,4 +28,17 @@ class Panenku extends Controller
         $this->view('panenku/tambah', $data);
         $this->view('templates/footer');
     }
+
+    public function tambahPanenku()
+    {
+        if ($this->model('Barang_model')->tambah($_POST, $_FILES) > 0) {
+            Flasher::setFlash('Berhasil', 'Panenku telah ditambahkan', 'success');
+            header('Location: ' . BASEURL . '/pengaturan');
+            exit;
+        } else {
+            Flasher::setFlash('Gagal', 'Cover profil tidak berubah', 'danger');
+            header('Location: ' . BASEURL . '/pengaturan');
+            exit;
+        }
+    }
 }

@@ -1,11 +1,23 @@
 <div class="container">
     <div class="card">
         <h5 class="card-header">
-            Panenku <a href="<?= BASEURL ?>/panenku/tambah" class="btn btn-primary">Tambah</a>
+            Panenku
+
+            <a href="<?= BASEURL ?>/panenku/tambah" class="btn btn-primary btn-sm float-right">Tambah</a>
         </h5>
-        <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari Buah-buahan atau Sayuran" aria-label="Cari Buah-buahan atau Sayuran" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
+                    </div>
+                </div>
+            </li>
             <?php if (!$data['panenku']) { ?>
-                Belum ada hasil panen
+                <li class="list-group-item">
+                    Belum ada hasil panen
+                </li>
             <?php } else {
             foreach ($data['panenku'] as $panenku) : ?>
                     <a href="<?= BASEURL; ?>/panenku/detail/<?= $panenku['id']; ?>">
@@ -17,6 +29,6 @@
                     </a>
                 <?php endforeach;
         } ?>
-        </div>
+        </ul>
     </div>
 </div>

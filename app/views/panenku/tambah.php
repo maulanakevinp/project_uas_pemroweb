@@ -23,6 +23,20 @@
                     <label for="deskripsi">Deskripsi</label>
                     <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi">
                 </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="deskripsi">Harga</label>
+                        <input type="number" class="form-control" name="harga" placeholder="harga">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="deskripsi">Jumlah</label>
+                        <input type="number" class="form-control" name="jumlah" placeholder="jumlah">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="deskripsi">Sisa</label>
+                        <input type="number" class="form-control" name="sisa" placeholder="sisa">
+                    </div>
+                </div>
                 <div>
                     <label> Foto </label>
                 </div>
