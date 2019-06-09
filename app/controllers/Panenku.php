@@ -29,6 +29,17 @@ class Panenku extends Controller
         $this->view('templates/footer');
     }
 
+    public function ubah($id)
+    {
+        $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+        $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
+        $data['panenku'] = $this->model('Barang_model')->getBarangByid($id);
+        $_SESSION['username'] = $data['user']['username'];
+        $this->view('templates/header', $data);
+        $this->view('panenku/ubah', $data);
+        $this->view('templates/footer');
+    }
+
     public function tambahPanenku()
     {
         if ($this->model('Barang_model')->tambah($_POST, $_FILES) > 0) {

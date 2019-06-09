@@ -42,7 +42,7 @@
                         <form action="<?= BASEURL ?>/pengaturan/ubahFotoProfil" enctype="multipart/form-data" method="post">
                             <center>
                                 <div class="mb-3 rounded-circle" style="width: 200px; height: 200px; background:url('<?= BASEURL ?> /assets/img/icon/5925094_4_256x256_1495095625.png'); background-size: 200px 200px">
-                                    <img class="rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
+                                    <img class="rounded-circle" id="blah" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
                                 </div>
                                 <div>
                                     <p>Upload foto profil anda untuk menambah nilai kepercayaan pembeli</p>
@@ -51,7 +51,7 @@
 
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto" name="foto" aria-describedby="foto" required>
+                                    <input type="file" class="custom-file-input" onchange="readURL(this);" id="foto" name="foto" aria-describedby="foto" required>
                                     <label class="custom-file-label" for="foto">Pilih Foto</label>
                                 </div>
                                 <div class="input-group-append">
