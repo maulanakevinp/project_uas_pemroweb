@@ -29,7 +29,7 @@
                     <h4 class="my-0 font-weight-normal">Sayuran</h4>
                 </div>
                 <div class="card-body">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div id="Sayuran" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="<?= BASEURL ?>/assets/img/picture/sayuran_20180619_101443.jpg" alt="" width="300px" height="200px">
@@ -50,7 +50,7 @@
                     <h4 class="my-0 font-weight-normal">Buah-Buahan</h4>
                 </div>
                 <div class="card-body">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div id="Buah-Buahan" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="<?= BASEURL ?>/assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="300px" height="200px">
@@ -71,7 +71,7 @@
                     <h4 class="my-0 font-weight-normal">Beras dan Biji-Bijian</h4>
                 </div>
                 <div class="card-body">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div id="Beras-dan-Biji-Bijian" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="<?= BASEURL ?>/assets/img/picture/beras-dan-biji-bijian.jpg" alt="" width="300px" height="200px">

@@ -25,20 +25,17 @@
                         <label for="deskripsi">Deskripsi</label>
                         <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" value="<?= $data['panenku']['deskripsi'] ?>" required>
                     </div>
-                    <div class=" form-row">
-                        <div class="form-group col-md-4">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
                             <label for="deskripsi">Harga (Rupiah/Kilogram)</label>
                             <input type="number" class="form-control" name="harga" placeholder="harga" value="<?= $data['panenku']['harga'] ?>" required>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label for="deskripsi">Jumlah (Kilogram)</label>
-                            <input type="number" class="form-control" name="jumlah" placeholder="jumlah" value="<?= $data['panenku']['jumlah'] ?>" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="deskripsi">Sisa (Kilogram)</label>
-                            <input type="number" class="form-control" name="sisa" placeholder="sisa" value="<?= $data['panenku']['sisa'] ?>" required>
+                        <div class="form-group col-md-6">
+                            <label for="deskripsi">Stok (Kilogram)</label>
+                            <input type="number" class="form-control" name="stok" placeholder="stok" value="<?= $data['panenku']['stok'] ?>" required>
                         </div>
                     </div>
+                </li>
                 <li class="list-group-item">
                     <button type="submit" class="btn btn-success btn-block">Simpan</button>
                 </li>
@@ -60,7 +57,7 @@
                         <form class="mt-3" action="<?= BASEURL ?>/panenku/ubahFoto1/<?= $data['panenku']['id'] ?>" enctype="multipart/form-data" method="post">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto1" name="foto1" aria-describedby="foto1">
+                                    <input type="file" class="custom-file-input" id="foto1" name="foto1" aria-describedby="foto1" required>
                                     <label class="custom-file-label" for="foto1">Pilih foto</label>
                                 </div>
                                 <div class="input-group-append">
@@ -81,7 +78,7 @@
                         <form class="mt-3" action="<?= BASEURL ?>/panenku/ubahFoto2/<?= $data['panenku']['id'] ?>" enctype="multipart/form-data" method="post">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto2" name="foto2" aria-describedby="foto2">
+                                    <input type="file" class="custom-file-input" id="foto2" name="foto2" aria-describedby="foto2" required>
                                     <label class="custom-file-label" for="foto2">Pilih foto</label>
                                 </div>
                                 <div class="input-group-append">
@@ -102,7 +99,7 @@
                         <form class="mt-3" action="<?= BASEURL ?>/panenku/ubahFoto3/<?= $data['panenku']['id'] ?>" enctype="multipart/form-data" method="post">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto3" name="foto3" aria-describedby="foto3">
+                                    <input type="file" class="custom-file-input" id="foto3" name="foto3" aria-describedby="foto3" required>
                                     <label class="custom-file-label" for="foto3">Pilih foto</label>
                                 </div>
                                 <div class="input-group-append">
@@ -123,7 +120,7 @@
                         <form class="mt-3" action="<?= BASEURL ?>/panenku/ubahFoto4/<?= $data['panenku']['id'] ?>" enctype="multipart/form-data" method="post">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto4" name="foto4" aria-describedby="foto4">
+                                    <input type="file" class="custom-file-input" id="foto4" name="foto4" aria-describedby="foto4" required>
                                     <label class="custom-file-label" for="foto4">Pilih foto</label>
                                 </div>
                                 <div class="input-group-append">
@@ -144,7 +141,7 @@
                         <form class="mt-3" action="<?= BASEURL ?>/panenku/ubahFoto5/<?= $data['panenku']['id'] ?>" enctype="multipart/form-data" method="post">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto5" name="foto5" aria-describedby="foto5">
+                                    <input type="file" class="custom-file-input" id="foto5" name="foto5" aria-describedby="foto5" required>
                                     <label class="custom-file-label" for="foto5">Pilih foto</label>
                                 </div>
                                 <div class="input-group-append">
@@ -165,7 +162,7 @@
                         <form class="mt-3" action="<?= BASEURL ?>/panenku/ubahFoto6/<?= $data['panenku']['id'] ?>" enctype="multipart/form-data" method="post">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="foto6" name="foto6" aria-describedby="foto6">
+                                    <input type="file" class="custom-file-input" id="foto6" name="foto6" aria-describedby="foto6" required>
                                     <label class="custom-file-label" for="foto6">Pilih foto</label>
                                 </div>
                                 <div class="input-group-append">

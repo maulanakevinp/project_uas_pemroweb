@@ -80,7 +80,7 @@ class User_model
 
 	public function ubahDetailKontak($data)
 	{
-		$query = "UPDATE users SET nama = :nama username = :username , nomor_telepon = :nomor_telepon WHERE id = :id";
+		$query = "UPDATE users SET nama = :nama , username = :username , nomor_telepon = :nomor_telepon WHERE id = :id";
 
 		$this->db->query($query);
 		$this->db->bind('nama', $data['nama']);
@@ -98,25 +98,35 @@ class User_model
 
 		$lokasi_file = $file['foto']['tmp_name'];
 		$nama_file   = $file['foto']['name'];
-		$direktori   = './app/models/foto/' . $nama_file;
+		$foto_baru = date('dmYHis') . $nama_file;
+		$direktori   = './app/models/foto/' . $foto_baru;
 
 		$query = "UPDATE users SET foto = :foto WHERE id = :id";
 
 		if (file_exists('./app/models/foto/' . $data['user']['foto'])) {
-			unlink('./app/models/foto/' . $data['user']['foto']);
-			move_uploaded_file($lokasi_file, $direktori);
-			$this->db->query($query);
-			$this->db->bind('foto', $nama_file);
-			$this->db->bind('id', $_SESSION['id']);
-			$this->db->execute();
-			return $this->db->rowCount();
+			if (unlink('./app/models/foto/' . $data['user']['foto'])) {
+				if (move_uploaded_file($lokasi_file, $direktori)) {
+					$this->db->query($query);
+					$this->db->bind('foto', $foto_baru);
+					$this->db->bind('id', $_SESSION['id']);
+					$this->db->execute();
+					return $this->db->rowCount();
+				} else {
+					return null;
+				}
+			} else {
+				return null;
+			}
 		} else {
-			move_uploaded_file($lokasi_file, $direktori);
-			$this->db->query($query);
-			$this->db->bind('foto', $nama_file);
-			$this->db->bind('id', $_SESSION['id']);
-			$this->db->execute();
-			return $this->db->rowCount();
+			if (move_uploaded_file($lokasi_file, $direktori)) {
+				$this->db->query($query);
+				$this->db->bind('foto', $foto_baru);
+				$this->db->bind('id', $_SESSION['id']);
+				$this->db->execute();
+				return $this->db->rowCount();
+			} else {
+				return null;
+			}
 		}
 	}
 
@@ -126,25 +136,35 @@ class User_model
 
 		$lokasi_file = $cover['cover']['tmp_name'];
 		$nama_file   = $cover['cover']['name'];
-		$direktori   = './app/models/cover/' . $nama_file;
+		$foto_baru = date('dmYHis') . $nama_file;
+		$direktori   = './app/models/cover/' . $foto_baru;
 
 		$query = "UPDATE users SET cover = :cover WHERE id = :id";
 
 		if (file_exists('./app/models/cover/' . $data['user']['cover'])) {
-			unlink('./app/models/cover/' . $data['user']['cover']);
-			move_uploaded_file($lokasi_file, $direktori);
-			$this->db->query($query);
-			$this->db->bind('cover', $nama_file);
-			$this->db->bind('id', $_SESSION['id']);
-			$this->db->execute();
-			return $this->db->rowCount();
+			if (unlink('./app/models/cover/' . $data['user']['cover'])) {
+				if (move_uploaded_file($lokasi_file, $direktori)) {
+					$this->db->query($query);
+					$this->db->bind('cover', $foto_baru);
+					$this->db->bind('id', $_SESSION['id']);
+					$this->db->execute();
+					return $this->db->rowCount();
+				} else {
+					return null;
+				}
+			} else {
+				return null;
+			}
 		} else {
-			move_uploaded_file($lokasi_file, $direktori);
-			$this->db->query($query);
-			$this->db->bind('cover', $nama_file);
-			$this->db->bind('id', $_SESSION['id']);
-			$this->db->execute();
-			return $this->db->rowCount();
+			if (move_uploaded_file($lokasi_file, $direktori)) {
+				$this->db->query($query);
+				$this->db->bind('cover', $foto_baru);
+				$this->db->bind('id', $_SESSION['id']);
+				$this->db->execute();
+				return $this->db->rowCount();
+			} else {
+				return null;
+			}
 		}
 	}
 

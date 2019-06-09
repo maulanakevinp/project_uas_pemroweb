@@ -12,7 +12,6 @@
             Email : <?= $data['user']['email'] ?> <br>
             Nomor : <?= $data['user']['nomor_telepon'] ?> <br>
             <p class="card-text text-muted">Member sejak <?= $data['user']['created_at'] ?> </p>
-            <a href="<?= BASEURL ?>/pengaturan" class="btn btn-light">Edit Profil</a>
         </div>
     </div>
     <div class="card mt-5">
@@ -39,6 +38,7 @@
                             <img class="float-left mr-3" src="<?= BASEURL ?>/app/models/barang/<?= $panenku['foto1']; ?>" alt="" width="100px;" height="100px">
                             <div class="">
                                 <h5 class="text-body"><?= $panenku['nama']; ?></h5>
+                                <p class="text-muted small">Ditambahkan sejak <?= $panenku['created_at']; ?>, Diubah sejak <?= $panenku['created_at']; ?></p>
                                 <p class="text-muted">Rp. <?= $panenku['harga']; ?>/Kg</p>
                                 <p class="text-body"><?= $panenku['deskripsi']; ?></p>
                             </div>

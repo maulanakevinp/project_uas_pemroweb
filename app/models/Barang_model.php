@@ -18,7 +18,7 @@ class Barang_model
 
     public function getBarangByid($id)
     {
-        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user, u.created_at as created_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.jumlah as jumlah , b.sisa as sisa , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user, u.created_at as created_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
         FROM barang b JOIN kategori k on (b.id_kategori=k.id)
         JOIN users u on (b.id_user=u.id)
         WHERE b.id = :id";
@@ -72,9 +72,9 @@ class Barang_model
         $tanggal = date('Y-m-d');
 
         $query = "INSERT INTO barang 
-        (id_user , nama, id_kategori , harga , jumlah , sisa , deskripsi, created_at, updated_at , foto1 , foto2 , foto3 , foto4 , foto5 , foto6) 
+        (id_user , nama, id_kategori , harga , stok , deskripsi, created_at, updated_at , foto1 , foto2 , foto3 , foto4 , foto5 , foto6) 
         VALUES 
-        (:id_user , :nama , :id_kategori , :harga , :jumlah , :sisa , :deskripsi , :created_at , :updated_at , :foto1 , :foto2 , :foto3 , :foto4 , :foto5 , :foto6 )";
+        (:id_user , :nama , :id_kategori , :harga , :stok  , :deskripsi , :created_at , :updated_at , :foto1 , :foto2 , :foto3 , :foto4 , :foto5 , :foto6 )";
 
         $this->db->query($query);
 
@@ -83,8 +83,7 @@ class Barang_model
         $this->db->bind('id_kategori', $data['kategori']);
         $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->bind('harga', $data['harga']);
-        $this->db->bind('jumlah', $data['jumlah']);
-        $this->db->bind('sisa', $data['sisa']);
+        $this->db->bind('stok', $data['stok']);
         $this->db->bind('created_at', $tanggal);
         $this->db->bind('updated_at', $tanggal);
 
@@ -132,7 +131,7 @@ class Barang_model
 
     public function ubah($id, $data)
     {
-        $query = "UPDATE barang SET id_kategori = :id_kategori , nama = :nama , harga = :harga , jumlah = :jumlah , sisa = :sisa , deskripsi = :deskripsi WHERE id = :id ";
+        $query = "UPDATE barang SET id_kategori = :id_kategori , nama = :nama , harga = :harga , stok = :stok  , deskripsi = :deskripsi WHERE id = :id ";
 
         $this->db->query($query);
         $this->db->bind('id', $id);
@@ -140,8 +139,7 @@ class Barang_model
         $this->db->bind('id_kategori', $data['kategori']);
         $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->bind('harga', $data['harga']);
-        $this->db->bind('jumlah', $data['jumlah']);
-        $this->db->bind('sisa', $data['sisa']);
+        $this->db->bind('stok', $data['stok']);
 
         $this->db->execute();
 
@@ -169,24 +167,29 @@ class Barang_model
 
         $query = "UPDATE barang SET foto1 = :foto WHERE id = :id";
 
-        if (empty($lokasi_file)) {
-            return null;
+        if (file_exists('./app/models/barang/' . $data['barang']['foto1'])) {
+            if (unlink('./app/models/barang/' . $data['barang']['foto1'])) {
+                if (move_uploaded_file($lokasi_file, $direktori_file)) {
+                    $this->db->query($query);
+                    $this->db->bind('foto', $foto_baru);
+                    $this->db->bind('id', $id);
+                    $this->db->execute();
+                    return $this->db->rowCount();
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
         } else {
-            if (file_exists('./app/models/cover/' . $data['barang']['foto1'])) {
-                unlink('./app/models/cover/' . $data['barang']['foto1']);
-                move_uploaded_file($lokasi_file, $direktori_file);
+            if (move_uploaded_file($lokasi_file, $direktori_file)) {
                 $this->db->query($query);
                 $this->db->bind('foto', $foto_baru);
                 $this->db->bind('id', $id);
                 $this->db->execute();
                 return $this->db->rowCount();
             } else {
-                move_uploaded_file($lokasi_file, $direktori_file);
-                $this->db->query($query);
-                $this->db->bind('foto', $foto_baru);
-                $this->db->bind('id', $id);
-                $this->db->execute();
-                return $this->db->rowCount();
+                return null;
             }
         }
     }
@@ -202,24 +205,29 @@ class Barang_model
 
         $query = "UPDATE barang SET foto2 = :foto WHERE id = :id";
 
-        if (empty($lokasi_file)) {
-            return null;
+        if (file_exists('./app/models/barang/' . $data['barang']['foto2'])) {
+            if (unlink('./app/models/barang/' . $data['barang']['foto2'])) {
+                if (move_uploaded_file($lokasi_file, $direktori_file)) {
+                    $this->db->query($query);
+                    $this->db->bind('foto', $foto_baru);
+                    $this->db->bind('id', $id);
+                    $this->db->execute();
+                    return $this->db->rowCount();
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
         } else {
-            if (file_exists('./app/models/cover/' . $data['barang']['foto2'])) {
-                unlink('./app/models/cover/' . $data['barang']['foto2']);
-                move_uploaded_file($lokasi_file, $direktori_file);
+            if (move_uploaded_file($lokasi_file, $direktori_file)) {
                 $this->db->query($query);
                 $this->db->bind('foto', $foto_baru);
                 $this->db->bind('id', $id);
                 $this->db->execute();
                 return $this->db->rowCount();
             } else {
-                move_uploaded_file($lokasi_file, $direktori_file);
-                $this->db->query($query);
-                $this->db->bind('foto', $foto_baru);
-                $this->db->bind('id', $id);
-                $this->db->execute();
-                return $this->db->rowCount();
+                return null;
             }
         }
     }
@@ -235,24 +243,29 @@ class Barang_model
 
         $query = "UPDATE barang SET foto3 = :foto WHERE id = :id";
 
-        if (empty($lokasi_file)) {
-            return null;
+        if (file_exists('./app/models/barang/' . $data['barang']['foto3'])) {
+            if (unlink('./app/models/barang/' . $data['barang']['foto3'])) {
+                if (move_uploaded_file($lokasi_file, $direktori_file)) {
+                    $this->db->query($query);
+                    $this->db->bind('foto', $foto_baru);
+                    $this->db->bind('id', $id);
+                    $this->db->execute();
+                    return $this->db->rowCount();
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
         } else {
-            if (file_exists('./app/models/cover/' . $data['barang']['foto3'])) {
-                unlink('./app/models/cover/' . $data['barang']['foto3']);
-                move_uploaded_file($lokasi_file, $direktori_file);
+            if (move_uploaded_file($lokasi_file, $direktori_file)) {
                 $this->db->query($query);
                 $this->db->bind('foto', $foto_baru);
                 $this->db->bind('id', $id);
                 $this->db->execute();
                 return $this->db->rowCount();
             } else {
-                move_uploaded_file($lokasi_file, $direktori_file);
-                $this->db->query($query);
-                $this->db->bind('foto', $foto_baru);
-                $this->db->bind('id', $id);
-                $this->db->execute();
-                return $this->db->rowCount();
+                return null;
             }
         }
     }
@@ -268,24 +281,29 @@ class Barang_model
 
         $query = "UPDATE barang SET foto4 = :foto WHERE id = :id";
 
-        if (empty($lokasi_file)) {
-            return null;
+        if (file_exists('./app/models/barang/' . $data['barang']['foto4'])) {
+            if (unlink('./app/models/barang/' . $data['barang']['foto4'])) {
+                if (move_uploaded_file($lokasi_file, $direktori_file)) {
+                    $this->db->query($query);
+                    $this->db->bind('foto', $foto_baru);
+                    $this->db->bind('id', $id);
+                    $this->db->execute();
+                    return $this->db->rowCount();
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
         } else {
-            if (file_exists('./app/models/cover/' . $data['barang']['foto4'])) {
-                unlink('./app/models/cover/' . $data['barang']['foto4']);
-                move_uploaded_file($lokasi_file, $direktori_file);
+            if (move_uploaded_file($lokasi_file, $direktori_file)) {
                 $this->db->query($query);
                 $this->db->bind('foto', $foto_baru);
                 $this->db->bind('id', $id);
                 $this->db->execute();
                 return $this->db->rowCount();
             } else {
-                move_uploaded_file($lokasi_file, $direktori_file);
-                $this->db->query($query);
-                $this->db->bind('foto', $foto_baru);
-                $this->db->bind('id', $id);
-                $this->db->execute();
-                return $this->db->rowCount();
+                return null;
             }
         }
     }
@@ -301,24 +319,29 @@ class Barang_model
 
         $query = "UPDATE barang SET foto5 = :foto WHERE id = :id";
 
-        if (empty($lokasi_file)) {
-            return null;
+        if (file_exists('./app/models/barang/' . $data['barang']['foto5'])) {
+            if (unlink('./app/models/barang/' . $data['barang']['foto5'])) {
+                if (move_uploaded_file($lokasi_file, $direktori_file)) {
+                    $this->db->query($query);
+                    $this->db->bind('foto', $foto_baru);
+                    $this->db->bind('id', $id);
+                    $this->db->execute();
+                    return $this->db->rowCount();
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
         } else {
-            if (file_exists('./app/models/cover/' . $data['barang']['foto5'])) {
-                unlink('./app/models/cover/' . $data['barang']['foto5']);
-                move_uploaded_file($lokasi_file, $direktori_file);
+            if (move_uploaded_file($lokasi_file, $direktori_file)) {
                 $this->db->query($query);
                 $this->db->bind('foto', $foto_baru);
                 $this->db->bind('id', $id);
                 $this->db->execute();
                 return $this->db->rowCount();
             } else {
-                move_uploaded_file($lokasi_file, $direktori_file);
-                $this->db->query($query);
-                $this->db->bind('foto', $foto_baru);
-                $this->db->bind('id', $id);
-                $this->db->execute();
-                return $this->db->rowCount();
+                return null;
             }
         }
     }
@@ -334,24 +357,29 @@ class Barang_model
 
         $query = "UPDATE barang SET foto6 = :foto WHERE id = :id";
 
-        if (empty($lokasi_file)) {
-            return null;
+        if (file_exists('./app/models/barang/' . $data['barang']['foto6'])) {
+            if (unlink('./app/models/barang/' . $data['barang']['foto6'])) {
+                if (move_uploaded_file($lokasi_file, $direktori_file)) {
+                    $this->db->query($query);
+                    $this->db->bind('foto', $foto_baru);
+                    $this->db->bind('id', $id);
+                    $this->db->execute();
+                    return $this->db->rowCount();
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
         } else {
-            if (file_exists('./app/models/cover/' . $data['barang']['foto6'])) {
-                unlink('./app/models/cover/' . $data['barang']['foto6']);
-                move_uploaded_file($lokasi_file, $direktori_file);
+            if (move_uploaded_file($lokasi_file, $direktori_file)) {
                 $this->db->query($query);
                 $this->db->bind('foto', $foto_baru);
                 $this->db->bind('id', $id);
                 $this->db->execute();
                 return $this->db->rowCount();
             } else {
-                move_uploaded_file($lokasi_file, $direktori_file);
-                $this->db->query($query);
-                $this->db->bind('foto', $foto_baru);
-                $this->db->bind('id', $id);
-                $this->db->execute();
-                return $this->db->rowCount();
+                return null;
             }
         }
     }
