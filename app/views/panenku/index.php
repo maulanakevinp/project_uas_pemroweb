@@ -24,6 +24,7 @@
                             <img class="float-left mr-3" src="<?= BASEURL ?>/app/models/barang/<?= $panenku['foto1']; ?>" alt="" width="100px;" height="100px">
                             <div class="">
                                 <h5 class="text-body"><?= $panenku['nama']; ?></h5>
+                                <p class="text-muted small">Ditambahkan sejak <?= $panenku['created_at']; ?>, Diubah sejak <?= $panenku['created_at']; ?></p>
                                 <p class="text-muted">Rp. <?= $panenku['harga']; ?>/Kg</p>
                                 <p class="text-body"><?= $panenku['deskripsi']; ?></p>
                             </div>

@@ -9,8 +9,8 @@
                 <img class=" rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
             </div>
             <h5 class="card-title "><?= $data['user']['nama'] ?></h5>
-            <p>Email : <?= $data['user']['email'] ?></p>
-            <p>Nomor : <?= $data['user']['nomor_telepon'] ?></p>
+            Email : <?= $data['user']['email'] ?> <br>
+            Nomor : <?= $data['user']['nomor_telepon'] ?> <br>
             <p class="card-text text-muted">Member sejak <?= $data['user']['created_at'] ?> </p>
             <a href="<?= BASEURL ?>/pengaturan" class="btn btn-light">Edit Profil</a>
         </div>
