@@ -64,52 +64,12 @@
 							<label for="password">Password</label>
 							<input type="password" class="form-control" id="password" name="password" required>
 						</div>
-						<a class="btn-link" href="" data-toggle="modal" data-target="#formDaftar" data-dismiss="modal">Tidak Punya Akun?</a>
+						<a class="btn-link" href="<?= BASEURL ?>/home/pendaftaran">Tidak Punya Akun?</a>
 						<a class="btn-link float-right" href="" data-toggle="modal" data-target="#formLupa" data-dismiss="modal">Lupa Password?</a>
 					</div>
 
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-						<button type="submit" class="btn btn-primary">Masuk</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal Daftar-->
-	<div class="modal fade" id="formDaftar" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<form id="form" action="<?= BASEURL ?>/home/daftar" method="POST">
-					<div class="modal-header">
-						<h5 class="modal-title">Daftar</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="form-group">
-							<label for="username">Nama Lengkap</label>
-							<input type="text" class="form-control" id="username" name="username" required>
-						</div>
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="text" class="form-control" id="emaild" name="emaild" required>
-						</div>
-						<div class="form-group">
-							<label for="password">Password</label>
-							<input type="password" class="form-control" id="passwordd" name="passwordd" required>
-						</div>
-						<div class="form-group">
-							<label for="cpassword">Konfirmasi Password</label>
-							<input type="password" class="form-control" id="cpassword" name="cpassword" required>
-						</div>
-						<a class="btn-link" href="" data-toggle="modal" data-target="#formMasuk" data-dismiss="modal">Sudah Punya Akun?</a>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-						<button type="submit" class="btn btn-primary">Daftar</button>
+						<button type="submit" class="btn btn-primary btn-block">Masuk</button>
 					</div>
 				</form>
 			</div>
@@ -137,8 +97,7 @@
 					</div>
 
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-						<button type="submit" class="btn btn-primary">Kirim</button>
+						<button type="submit" class="btn btn-primary btn-block">Kirim</button>
 					</div>
 				</form>
 			</div>

@@ -8,7 +8,7 @@ class Panenku extends Controller
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
             $data['panenku'] = $this->model('Barang_model')->getBarangUser($_SESSION['id']);
-            $_SESSION['nama'] = $data['user']['username'];
+            $_SESSION['username'] = $data['user']['username'];
             $_SESSION['foto'] = $data['user']['foto'];
             $this->view('templates/header', $data);
             $this->view('panenku/index', $data);
@@ -23,7 +23,7 @@ class Panenku extends Controller
     {
         $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
         $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
-        $_SESSION['nama'] = $data['user']['username'];
+        $_SESSION['username'] = $data['user']['username'];
         $this->view('templates/header', $data);
         $this->view('panenku/tambah', $data);
         $this->view('templates/footer');
@@ -33,11 +33,11 @@ class Panenku extends Controller
     {
         if ($this->model('Barang_model')->tambah($_POST, $_FILES) > 0) {
             Flasher::setFlash('Berhasil', 'Panenku telah ditambahkan', 'success');
-            header('Location: ' . BASEURL . '/pengaturan');
+            header('Location: ' . BASEURL . '/panenku');
             exit;
         } else {
-            Flasher::setFlash('Gagal', 'Cover profil tidak berubah', 'danger');
-            header('Location: ' . BASEURL . '/pengaturan');
+            Flasher::setFlash('Gagal', 'Panenku tidak bertambah', 'danger');
+            header('Location: ' . BASEURL . '/panenku');
             exit;
         }
     }

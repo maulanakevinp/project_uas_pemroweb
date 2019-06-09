@@ -1,8 +1,6 @@
 <?php
 class Home extends Controller
 {
-    public function __construct()
-    { }
     public function index()
     {
         if (isset($_SESSION['id'])) {
@@ -29,9 +27,17 @@ class Home extends Controller
             header('Location: ' . BASEURL);
         } else {
             Flasher::setFlash('Gagal', 'Masuk', 'danger');
-            header('Location: ' . BASEURL);
+            header('Location: ' . BASEURL . '/home/pendaftaran');
             exit;
         }
+    }
+
+    public function pendaftaran()
+    {
+        $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+        $this->view('templates/header', $data);
+        $this->view('home/pendaftaran');
+        $this->view('templates/footer');
     }
 
     public function keluar()
@@ -43,8 +49,8 @@ class Home extends Controller
 
     public function daftar()
     {
-        if ($_POST['passwordd'] == $_POST['cpassword']) {
-            if ($this->model('User_model')->daftar($_POST) > 0) {
+        if ($_POST['password'] == $_POST['cpassword']) {
+            if ($this->model('User_model')->daftar($_POST, $_FILES) > 0) {
                 Flasher::setFlash('Berhasil', 'Daftar', 'success');
                 header('Location: ' . BASEURL);
                 exit;

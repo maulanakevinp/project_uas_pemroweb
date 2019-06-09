@@ -8,11 +8,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="nama">Nama Hasil Panen</label>
-                        <input type="text" class="form-control" name="nama" placeholder="Nama Hasil Panen">
+                        <input type="text" class="form-control" name="nama" placeholder="Nama Hasil Panen" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="kategori">Kategori</label>
-                        <select name="kategori" class="form-control">
+                        <select name="kategori" class="form-control" required>
                             <option value="1">Sayuran</option>
                             <option value="2">Buah-Buahan</option>
                             <option value="3">Beras dan Biji-Bijian</option>
@@ -21,20 +21,20 @@
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                    <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi">
+                    <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" required>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="deskripsi">Harga</label>
-                        <input type="number" class="form-control" name="harga" placeholder="harga">
+                        <label for="deskripsi">Harga (Rupiah/Kilogram)</label>
+                        <input type="number" class="form-control" name="harga" placeholder="harga" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="deskripsi">Jumlah</label>
-                        <input type="number" class="form-control" name="jumlah" placeholder="jumlah">
+                        <label for="deskripsi">Jumlah (Kilogram)</label>
+                        <input type="number" class="form-control" name="jumlah" placeholder="jumlah" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="deskripsi">Sisa</label>
-                        <input type="number" class="form-control" name="sisa" placeholder="sisa">
+                        <label for="deskripsi">Sisa (Kilogram)</label>
+                        <input type="number" class="form-control" name="sisa" placeholder="sisa" required>
                     </div>
                 </div>
                 <div>
@@ -77,20 +77,8 @@
                             <label class="custom-file-label" for="foto6">Pilih foto</label>
                         </div>
                     </div>
-                    <div class="input-group col-md-6 mb-3">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="foto7" name="foto7" aria-describedby="inputGroupFileAddon04">
-                            <label class="custom-file-label" for="foto7">Pilih foto</label>
-                        </div>
-                    </div>
-                    <div class="input-group col-md-6 mb-3">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="foto8" name="foto8" aria-describedby="inputGroupFileAddon04">
-                            <label class="custom-file-label" for="foto8">Pilih foto</label>
-                        </div>
-                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-success btn-block">Simpan</button>
             </form>
         </div>
     </div>

@@ -7,6 +7,7 @@ class Profil extends Controller
         if (isset($_SESSION['id'])) {
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
+            $data['panenku'] = $this->model('Barang_model')->getBarangUser($data['user']['id']);
             $_SESSION['username'] = $data['user']['username'];
             $_SESSION['foto'] = $data['user']['foto'];
             $data['user']['created_at'] = $this->tgl_indo($data['user']['created_at']);

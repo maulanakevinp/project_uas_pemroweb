@@ -18,6 +18,10 @@
                     <div class="container mt-2">
                         <form action="<?= BASEURL ?>/pengaturan/ubahDetailKontak" method="post">
                             <div class="form-group">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" name="nama" value="<?= $data['user']['nama'] ?>">
+                            </div>
+                            <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="username" class="form-control" id="username" name="username" value="<?= $data['user']['username'] ?>">
                             </div>
@@ -37,7 +41,7 @@
                     <div class="container mt-2">
                         <form action="<?= BASEURL ?>/pengaturan/ubahFotoProfil" enctype="multipart/form-data" method="post">
                             <center>
-                                <div class="mb-3 rounded-circle" style="width: 200px; height: 200px; background:url('https://avatar.olx.biz.id/BF9C/49052/5925094_4_256x256_1495095625.jpg'); background-size: 120px 120px">
+                                <div class="mb-3 rounded-circle" style="width: 200px; height: 200px; background:url('<?= BASEURL ?> /assets/img/icon/5925094_4_256x256_1495095625.png'); background-size: 200px 200px">
                                     <img class="rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
                                 </div>
                                 <div>
@@ -51,7 +55,7 @@
                                     <label class="custom-file-label" for="foto">Pilih Foto</label>
                                 </div>
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="submit" id="foto">Updload</button>
+                                    <button class="btn btn-outline-secondary" type="submit" id="foto">Upload</button>
                                 </div>
                             </div>
                         </form>
@@ -61,7 +65,7 @@
                     <div class="container mt-2">
                         <form action="<?= BASEURL ?>/pengaturan/ubahCoverProfil" enctype="multipart/form-data" method="post">
 
-                            <div class="mb-3 " style="width: 100%; height: 200px; background:url('<?= BASEURL ?>/assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg');">
+                            <div class="mb-3 " style="width: 100%; height: 200px; background:url('<?= BASEURL ?>/assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg'); background-size: 100% 200px">
                                 <img src="<?= BASEURL ?>/app/models/cover/<?= $data['user']['cover'] ?>" alt="" width="100%" height="200px">
                             </div>
                             <div>
