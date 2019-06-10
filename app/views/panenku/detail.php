@@ -67,8 +67,11 @@
                     <h5 class="mt-3"><?= $data['panenku']['nama_user'] ?></h5>
                     <?= $data['panenku']['email'] ?> <br>
                     <?= $data['panenku']['nomor_telepon'] ?> <br>
-                    <p class="card-text text-muted">Member sejak <?= $data['panenku']['created_at_user'] ?> </p>
-                    <a href="<?= BASEURL ?>/Profil/<?= $data['panenku']['id_user'] ?>" class="btn btn-outline-primary">Lihat Profil</a>
+                    <p class="card-text text-muted">
+                        Member sejak <?= $data['panenku']['created_at_user'] ?> <br>
+                        Terakhir masuk <?= $data['panenku']['updated_at_user'] ?>
+                    </p>
+                    <a href="<?= BASEURL ?>/profil/user/<?= $data['panenku']['id_user'] ?>" class="btn btn-outline-primary">Lihat Profil</a>
                 </div>
             </div>
 

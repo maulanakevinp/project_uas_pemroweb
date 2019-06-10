@@ -17,24 +17,23 @@
 			</span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbars">
-			<div class="input-group mr-3 ml-3">
-				<input type="text" class="form-control" placeholder="Cari Buah-buahan atau Sayuran" aria-label="Cari Buah-buahan atau Sayuran" aria-describedby="button-addon2">
+			<form id="cari" action="<?= BASEURL ?>/kategori/cari" class="input-group mr-3 ml-3" method="POST">
+				<input type="text" name="cari" class="form-control" placeholder="Cari Buah-buahan atau Sayuran" aria-label="cari" aria-describedby="cari" required>
 				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
+					<button class="btn btn-outline-secondary" type="submit" id="cari">Cari</button>
 				</div>
-			</div>
+			</form>
 			<ul class="nav nav-pills navbar-nav mr-1 ml-1">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Kategori</a>
 					<div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="kategori">
-						<a class="dropdown-item" href="#">Sayuran</a>
-						<a class="dropdown-item" href="#">Buah-Buahan</a>
-						<a class="dropdown-item" href="#">Beras dan Biji-Bijian</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>/kategori/sayuran">Sayuran</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>/kategori/buah_buahan">Buah-Buahan</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>/kategori/beras_dan_biji_bijian">Beras dan Biji-Bijian</a>
 					</div>
 				</li>
 			</ul>
 			<?php Flasher::header() ?>
-
 		</div>
 	</header>
 

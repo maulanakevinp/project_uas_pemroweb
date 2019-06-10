@@ -18,7 +18,7 @@ class Barang_model
 
     public function getBarangByid($id)
     {
-        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user, u.created_at as created_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user , u.cover as cover , u.created_at as created_at_user , u.updated_at as updated_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
         FROM barang b JOIN kategori k on (b.id_kategori=k.id)
         JOIN users u on (b.id_user=u.id)
         WHERE b.id = :id";
@@ -30,9 +30,63 @@ class Barang_model
 
     public function getBarangUser($id)
     {
-        $query = "SELECT * FROM barang WHERE id_user = :id_user";
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user , u.cover as cover , u.created_at as created_at_user , u.updated_at as updated_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        FROM barang b JOIN kategori k on (b.id_kategori=k.id)
+        JOIN users u on (b.id_user=u.id)
+        WHERE b.id_user = :id_user";
+
         $this->db->query($query);
         $this->db->bind('id_user', $id);
+        return $this->db->resultSet();
+    }
+
+    public function cari($data)
+    {
+        $keyword = $data['cari'];
+
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user , u.cover as cover , u.created_at as created_at_user , u.updated_at as updated_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        FROM barang b JOIN kategori k on (b.id_kategori=k.id)
+        JOIN users u on (b.id_user=u.id)
+        WHERE b.nama like :cari";
+
+        $this->db->query($query);
+        $this->db->bind('cari', "%$keyword%");
+        return $this->db->resultSet();
+    }
+
+    public function getSayuran()
+    {
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user, u.created_at as created_at_user , u.updated_at as updated_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        FROM barang b JOIN kategori k on (b.id_kategori=k.id)
+        JOIN users u on (b.id_user=u.id)
+        WHERE b.id_kategori = :id";
+
+        $this->db->query($query);
+        $this->db->bind('id', 1);
+        return $this->db->resultSet();
+    }
+
+    public function getBuah_buahan()
+    {
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user, u.created_at as created_at_user , u.updated_at as updated_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        FROM barang b JOIN kategori k on (b.id_kategori=k.id)
+        JOIN users u on (b.id_user=u.id)
+        WHERE b.id_kategori = :id";
+
+        $this->db->query($query);
+        $this->db->bind('id', 2);
+        return $this->db->resultSet();
+    }
+
+    public function getBeras_dan_biji_bijian()
+    {
+        $query = "SELECT b.id as id, b.id_user as id_user , u.nama as nama_user , u.email as email , u.nomor_telepon as nomor_telepon , u.alamat as alamat , u.foto as foto_user, u.created_at as created_at_user , u.updated_at as updated_at_user , b.id_kategori as id_kategori , k.kategori as kategori , b.nama as nama , b.harga as harga , b.stok as stok , b.deskripsi as deskripsi , b.created_at as created_at , b.updated_at as updated_at , b.foto1 as foto1 , b.foto2 as foto2 , b.foto3 as foto3 , b.foto4 as foto4 , b.foto5  as foto5 , b.foto6 as foto6
+        FROM barang b JOIN kategori k on (b.id_kategori=k.id)
+        JOIN users u on (b.id_user=u.id)
+        WHERE b.id_kategori = :id";
+
+        $this->db->query($query);
+        $this->db->bind('id', 3);
         return $this->db->resultSet();
     }
 

@@ -21,6 +21,34 @@ class Profil extends Controller
         }
     }
 
+    public function user($id)
+    {
+        $data['penjual'] = $this->model('User_model')->getUserByid($id);
+        $data['panenku'] = $this->model('Barang_model')->getBarangUser($id);
+
+        if (empty($data['penjual']) && empty($data['panenku'])) {
+            header('Location: ' . BASEURL);
+            exit;
+        } else {
+            if (isset($_SESSION['id'])) {
+                $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+                $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
+                $_SESSION['username'] = $data['user']['username'];
+                $_SESSION['foto'] = $data['user']['foto'];
+                $data['penjual']['created_at'] = $this->tgl_indo($data['penjual']['created_at']);
+                $this->view('templates/header', $data);
+                $this->view('profil/user', $data);
+                $this->view('templates/footer');
+            } else {
+                $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+                $data['penjual']['created_at'] = $this->tgl_indo($data['penjual']['created_at']);
+                $this->view('templates/header');
+                $this->view('profil/user', $data);
+                $this->view('templates/footer');
+            }
+        }
+    }
+
     function tgl_indo($tanggal)
     {
         $bulan = array(

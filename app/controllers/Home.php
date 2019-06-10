@@ -24,10 +24,16 @@ class Home extends Controller
         $data['user'] = $this->model('User_model')->login($_POST);
         if (isset($data['user']['id'])) {
             $_SESSION['id'] = $data['user']['id'];
-            header('Location: ' . BASEURL);
+            if ($this->model('User_model')->updatedAt($data['user']['id']) > 0) {
+                header('Location: ' . BASEURL);
+            } else {
+                Flasher::setFlash('Gagal', 'Masuk', 'danger');
+                header('Location: ' . BASEURL . '/home');
+                exit;
+            }
         } else {
             Flasher::setFlash('Gagal', 'Masuk', 'danger');
-            header('Location: ' . BASEURL . '/home/pendaftaran');
+            header('Location: ' . BASEURL . '/home');
             exit;
         }
     }

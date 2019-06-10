@@ -21,13 +21,22 @@ class Panenku extends Controller
 
     public function detail($id)
     {
-        $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
-        $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
-        $data['panenku'] = $this->model('Barang_model')->getBarangByid($id);
-        $_SESSION['username'] = $data['user']['username'];
-        $this->view('templates/header', $data);
-        $this->view('panenku/detail', $data);
-        $this->view('templates/footer');
+        if (isset($_SESSION['id'])) {
+            $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+            $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
+            $data['panenku'] = $this->model('Barang_model')->getBarangByid($id);
+            $_SESSION['username'] = $data['user']['username'];
+            $this->view('templates/header', $data);
+            $this->view('panenku/detail', $data);
+            $this->view('templates/footer');
+        } else {
+
+            $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+            $data['panenku'] = $this->model('Barang_model')->getBarangByid($id);
+            $this->view('templates/header', $data);
+            $this->view('panenku/detail', $data);
+            $this->view('templates/footer');
+        }
     }
 
     public function tambah()

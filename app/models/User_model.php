@@ -179,4 +179,17 @@ class User_model
 
 		return $this->db->rowCount();
 	}
+
+	public function updatedAt($id)
+	{
+		$tanggal = date('Y-m-d H:i:s');
+
+		$query = "UPDATE users SET updated_at = :updated_at WHERE id = :id";
+
+		$this->db->query($query);
+		$this->db->bind('updated_at', $tanggal);
+		$this->db->bind('id', $id);
+		$this->db->execute();
+		return $this->db->rowCount();
+	}
 }
