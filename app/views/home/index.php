@@ -14,7 +14,7 @@
     </div>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">Manenin</h1>
-        <p class="lead">Manenin adalah sebuah toko online yang berisi tentang jual beli hasil panen seperti buah-buahan, sayuran, dan umbi-umbian. Masyarakat dapat membeli hasil panen tersebut dengan cara online. untuk memesan hasil panen anda dapat menghubungi penjual yang menjual hasil panennya.</p>
+        <p class="lead">Manenin adalah sebuah toko online yang berisi tentang jual beli hasil panen seperti buah-buahan, sayuran, dan beras dan biji-bijian. Masyarakat dapat membeli hasil panen tersebut dengan cara online. untuk memesan hasil panen anda dapat menghubungi penjual yang menjual hasil panennya.</p>
     </div>
     <div class="card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm">

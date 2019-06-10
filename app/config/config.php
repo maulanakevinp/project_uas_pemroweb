@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://localhost/project_uas_pemroweb');
+define('BASEURL', 'http://192.168.137.201/project_uas_pemroweb');
 
 // DB
 define('DB_HOST', 'localhost');

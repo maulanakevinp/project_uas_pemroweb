@@ -60,6 +60,10 @@ class Home extends Controller
                 Flasher::setFlash('Berhasil', 'Daftar', 'success');
                 header('Location: ' . BASEURL);
                 exit;
+            } else {
+                Flasher::setFlash('Gagal', 'Daftar', 'danger');
+                header('Location: ' . BASEURL);
+                exit;
             }
         } else {
             Flasher::setFlash('Gagal', 'Daftar', 'danger');

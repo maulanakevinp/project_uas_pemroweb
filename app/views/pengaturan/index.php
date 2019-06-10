@@ -26,6 +26,10 @@
                                 <input type="username" class="form-control" id="username" name="username" value="<?= $data['user']['username'] ?>">
                             </div>
                             <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" value="<?= $data['user']['email'] ?>">
+                            </div>
+                            <div class="form-group">
                                 <label for="nomor_telepon">Nomor telepon</label>
                                 <input type="number" class="form-control" id="nomor_telepon" name="nomor_telepon" value="<?= $data['user']['nomor_telepon'] ?>">
                             </div>

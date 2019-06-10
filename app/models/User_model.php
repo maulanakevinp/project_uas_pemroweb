@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  */
 class User_model
 {
@@ -42,13 +42,11 @@ class User_model
 		$nama_foto   = $file['foto']['name'];
 		$foto_baru = date('dmYHis') . $nama_foto;
 		$direktori_foto   = './app/models/foto/' . $foto_baru;
-		$pindah_foto = move_uploaded_file($lokasi_foto, $direktori_foto);
 
 		$lokasi_cover = $file['cover']['tmp_name'];
 		$nama_cover   = $file['cover']['name'];
 		$cover_baru = date('dmYHis') . $nama_cover;
 		$direktori_cover   = './app/models/cover/' . $cover_baru;
-		$pindah_cover = move_uploaded_file($lokasi_cover, $direktori_cover);
 
 		$tanggal = date('Y-m-d');
 
@@ -57,35 +55,44 @@ class User_model
 		VALUES 
 		( :id_level_user , :nama , :username , :email , :password , :nomor_telepon , :alamat , :foto , :cover , :created_at , :updated_at)";
 
-		if ($pindah_foto && $pindah_cover) {
-			$this->db->query($query);
-			$this->db->bind('id_level_user', 2);
-			$this->db->bind('nama', $data['nama']);
-			$this->db->bind('username', $data['username']);
-			$this->db->bind('email', $data['email']);
-			$this->db->bind('password', md5($data['password']));
-			$this->db->bind('nomor_telepon', $data['nomor_telepon']);
-			$this->db->bind('alamat', $data['alamat']);
-			$this->db->bind('foto', $foto_baru);
-			$this->db->bind('cover', $cover_baru);
-			$this->db->bind('created_at', $tanggal);
-			$this->db->bind('updated_at', $tanggal);
-			$this->db->execute();
 
-			return $this->db->rowCount();
+		$this->db->query($query);
+		$this->db->bind('id_level_user', 2);
+		$this->db->bind('nama', $data['nama']);
+		$this->db->bind('username', $data['username']);
+		$this->db->bind('email', $data['email']);
+		$this->db->bind('password', md5($data['password']));
+		$this->db->bind('nomor_telepon', $data['nomor_telepon']);
+		$this->db->bind('alamat', $data['alamat']);
+
+		if (!empty($lokasi_foto)) {
+			$this->db->bind('foto', $foto_baru);
+			move_uploaded_file($lokasi_foto, $direktori_foto);
 		} else {
-			return null;
+			$this->db->bind('foto', '');
 		}
+
+		if (!empty($lokasi_cover)) {
+			$this->db->bind('cover', $cover_baru);
+			move_uploaded_file($lokasi_cover, $direktori_cover);
+		}
+		$this->db->bind('created_at', $tanggal);
+		$this->db->bind('updated_at', $tanggal);
+		$this->db->execute();
+
+		return $this->db->rowCount();
 	}
 
 	public function ubahDetailKontak($data)
 	{
-		$query = "UPDATE users SET nama = :nama , username = :username , nomor_telepon = :nomor_telepon WHERE id = :id";
+		$query = "UPDATE users SET nama = :nama , email = :email , username = :username , nomor_telepon = :nomor_telepon , alamat = :alamat WHERE id = :id";
 
 		$this->db->query($query);
 		$this->db->bind('nama', $data['nama']);
+		$this->db->bind('email', $data['email']);
 		$this->db->bind('username', $data['username']);
 		$this->db->bind('nomor_telepon', $data['nomor_telepon']);
+		$this->db->bind('alamat', $data['alamat']);
 		$this->db->bind('id', $_SESSION['id']);
 		$this->db->execute();
 
