@@ -75,7 +75,10 @@ class User_model
 		if (!empty($lokasi_cover)) {
 			$this->db->bind('cover', $cover_baru);
 			move_uploaded_file($lokasi_cover, $direktori_cover);
+		} else {
+			$this->db->bind('cover', '');
 		}
+
 		$this->db->bind('created_at', $tanggal);
 		$this->db->bind('updated_at', $tanggal);
 		$this->db->execute();

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:$PROJECT_DIR$/../..//$PROJECT_DIR$/.idea/project_uas_pemroweb.iml" filepath="$PROJECT_DIR$/.idea/project_uas_pemroweb.iml" />
+      <module fileurl="file:$PROJECT_DIR$/../..//C:/xampp/htdocs/phpmvc/.idea/phpmvc.iml" filepath="C:/xampp/htdocs/phpmvc/.idea/phpmvc.iml" />
+      <module fileurl="file:$PROJECT_DIR$/../../////MAULANAKEVINP/project_uas_pemroweb/.idea/project_uas_pemroweb.iml" filepath="///MAULANAKEVINP/project_uas_pemroweb/.idea/project_uas_pemroweb.iml" />
     </modules>
   </component>
 </project>
