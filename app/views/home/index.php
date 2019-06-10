@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-2">Lihat</button>
+                    <a href="<?= BASEURL ?>/kategori/sayuran" type=" button" class="btn btn-lg btn-block btn-outline-primary mt-2">Lihat</a>
                 </div>
             </div>
             <div class="card mb-4 shadow-sm">
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type=" button" class="btn btn-lg btn-block btn-outline-primary mt-2">Lihat</button>
+                    <a href="<?= BASEURL ?>/kategori/buah_buahan" type=" button" class="btn btn-lg btn-block btn-outline-primary mt-2">Lihat</a>
                 </div>
             </div>
             <div class="card mb-4 shadow-sm">
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type=" button" class="btn btn-lg btn-block btn-outline-primary mt-2">Lihat</button>
+                    <a href="<?= BASEURL ?>/kategori/beras_dan_biji_bijian" type=" button" class="btn btn-lg btn-block btn-outline-primary mt-2">Lihat</a>
                 </div>
             </div>
         </div>

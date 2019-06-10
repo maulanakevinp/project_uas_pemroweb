@@ -12,12 +12,20 @@
             foreach ($data['hasil_panen'] as $panenku) : ?>
                     <li class="list-group-item ">
                         <a class="card-link" href="<?= BASEURL; ?>/panenku/detail/<?= $panenku['id']; ?>">
-                            <img class="float-left mr-3" src="<?= BASEURL ?>/app/models/barang/<?= $panenku['foto1']; ?>" alt="" width="100px;" height="100px">
-                            <div class="">
-                                <h5 class="text-body"><?= $panenku['nama']; ?></h5>
-                                <p class="text-muted small">Ditambahkan sejak <?= $panenku['created_at']; ?>, Diubah sejak <?= $panenku['created_at']; ?></p>
-                                <p class="text-muted">Rp. <?= $panenku['harga']; ?>/Kg</p>
-                                <p class="text-body"><?= $panenku['deskripsi']; ?></p>
+                            <div class="row">
+                                <div class="col-md-2 mb-3">
+                                    <img class="" src="<?= BASEURL ?>/app/models/barang/<?= $panenku['foto1']; ?>" alt="" width="100%;">
+                                </div>
+                                <div class="col-md-7">
+                                    <h5 class="text-body"><?= $panenku['nama']; ?></h5>
+                                    <p class="text-body"><?= $panenku['deskripsi']; ?></p>
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end flex-column">
+                                    <p class="text-muted">Rp. <?= $panenku['harga']; ?>/Kg</p>
+                                    <p class="text-muted small mt-auto">
+                                        Ditambahkan sejak <?= $panenku['created_at']; ?> <br>
+                                    </p>
+                                </div>
                             </div>
                         </a>
                     </li>

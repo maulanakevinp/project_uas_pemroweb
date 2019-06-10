@@ -10,20 +10,20 @@
 
 <body>
 	<header class="navbar navbar-expand-md navbar-dark fixed-top bg-white border-bottom shadow-sm">
-		<h5 class="my-0 mr-md-auto font-weight-normal"><a href="<?= BASEURL ?>" class="nav-link">Manenin</a></h5>
+		<h5 class="p-2 font-weight-normal"><a href="<?= BASEURL ?>" class="nav-link">Manenin</a></h5>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
 			<span>
 				<img class="btn btn-light" src="<?= BASEURL ?>/assets/img/icon/icons8_menu_filled_30px.png" alt="">
 			</span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbars">
-			<form id="cari" action="<?= BASEURL ?>/kategori/cari" class="input-group mr-3 ml-3" method="POST">
+			<form id="cari" action="<?= BASEURL ?>/kategori/cari" class="input-group p-2" method="POST">
 				<input type="text" name="cari" class="form-control" placeholder="Cari Buah-buahan atau Sayuran" aria-label="cari" aria-describedby="cari" required>
 				<div class="input-group-append">
 					<button class="btn btn-outline-secondary" type="submit" id="cari">Cari</button>
 				</div>
 			</form>
-			<ul class="nav nav-pills navbar-nav mr-1 ml-1">
+			<ul class="nav nav-pills navbar-nav p-2">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Kategori</a>
 					<div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="kategori">

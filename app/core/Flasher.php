@@ -14,7 +14,7 @@ class Flasher
             $pengaturan = BASEURL . "/pengaturan";
             $keluar = BASEURL . "/home/keluar";
 
-            echo "<ul class='nav nav-pills navbar-nav mr-auto'>
+            echo "<ul class='nav nav-pills navbar-nav p-2'>
 				<li class='nav-item dropdown '>
                     <a class='nav-link dropdown-toggle' href='#' id='akun' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' style='color:black'>
                     <img class = 'mr-2' src='$fotoprofil' width = '30px' height = '30px'>$username
@@ -29,7 +29,7 @@ class Flasher
 				</li>
 			</ul>";
         } else {
-            echo "<a class='btn btn-outline-primary' href='#' data-toggle='modal' data-target='#formMasuk'>Masuk</a>";
+            echo "<a class='nav navbar-nav btn btn-outline-primary p-2' href='#' data-toggle='modal' data-target='#formMasuk'>Masuk</a>";
         }
     }
 
