@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12d530ad-e6f3-42ac-a3bc-c535bd5e5119" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project_uas_pemroweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project_uas_pemroweb.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/barang/10062019192535sweet-corn-3705687__340.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/barang/10062019192623alpukat.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/barang/10062019193444apple-2788616__340.jpg" beforeDir="false" />
@@ -16,8 +14,10 @@
       <change beforePath="$PROJECT_DIR$/app/models/barang/10062019194508sawi.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/cover/1006201919112609062019012814slide2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/cover/10062019194032carrots-2387394__340.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cover/10062019201910bibit apel.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/foto/1006201919112610062019190803_DSC6546 Full Face.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/foto/10062019192431MANEN.IN (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/foto/10062019201910Capture.PNG" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file:$PROJECT_DIR$/../..//C:/xampp/htdocs/phpmvc/app/core/App.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="102">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -91,7 +91,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -107,10 +107,6 @@
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="project_uas_pemroweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_uas_pemroweb" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="project_uas_pemroweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="phpmvc" type="462c0819:PsiDirectoryNode" />
@@ -170,15 +166,15 @@
       <updated>1560167825018</updated>
       <workItem from="1560167826818" duration="52000" />
       <workItem from="1560167885906" duration="4051000" />
-      <workItem from="1560172174104" duration="2191000" />
+      <workItem from="1560172174104" duration="2847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6294000" />
+    <option name="totallyTimeSpent" value="6950000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
@@ -325,8 +321,8 @@
     </entry>
     <entry file="file:$PROJECT_DIR$/../..//C:/xampp/htdocs/phpmvc/app/core/App.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
