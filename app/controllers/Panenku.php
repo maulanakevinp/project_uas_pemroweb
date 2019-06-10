@@ -19,6 +19,27 @@ class Panenku extends Controller
         }
     }
 
+    public function cari()
+    {
+        if (isset($_SESSION['id'])) {
+            if (empty($_POST['cari'])) {
+                $this->index();
+            } else {
+                $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
+                $data['user'] = $this->model('User_model')->getUserByid($_SESSION['id']);
+                $_SESSION['username'] = $data['user']['username'];
+                $_SESSION['foto'] = $data['user']['foto'];
+                $data['panenku'] = $this->model('Barang_model')->cariPanenku($_POST);
+                $this->view('templates/header', $data);
+                $this->view('panenku/cari', $data);
+                $this->view('templates/footer');
+            }
+        } else {
+            header('Location: ' . BASEURL);
+            exit;
+        }
+    }
+
     public function detail($id)
     {
         if (isset($_SESSION['id'])) {

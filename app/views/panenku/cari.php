@@ -15,7 +15,7 @@
             </li>
             <?php if (!$data['panenku']) { ?>
                 <li class="list-group-item">
-                    Belum ada hasil panen
+                    Kosong
                 </li>
             <?php } else {
             foreach ($data['panenku'] as $panenku) : ?>

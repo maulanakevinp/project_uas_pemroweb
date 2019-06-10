@@ -58,7 +58,7 @@ class Kategori extends Controller
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['hasil_panen'] = $this->model('Barang_model')->getBuah_buahan();
             $this->view('templates/header', $data);
-            $this->view('hasil_panen/buah_buahan', $data);
+            $this->view('kategori/buah_buahan', $data);
             $this->view('templates/footer');
         }
     }
@@ -78,7 +78,7 @@ class Kategori extends Controller
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['hasil_panen'] = $this->model('Barang_model')->getBeras_dan_biji_bijian();
             $this->view('templates/header', $data);
-            $this->view('hasil_panen/beras_dan_biji_bijian', $data);
+            $this->view('kategori/beras_dan_biji_bijian', $data);
             $this->view('templates/footer');
         }
     }

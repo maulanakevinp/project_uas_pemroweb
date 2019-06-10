@@ -18,7 +18,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbars">
 			<form id="cari" action="<?= BASEURL ?>/kategori/cari" class="input-group p-2" method="POST">
-				<input type="text" name="cari" class="form-control" placeholder="Cari Buah-buahan atau Sayuran" aria-label="cari" aria-describedby="cari" required>
+				<input type="text" name="cari" class="form-control" autocomplete="off" placeholder="Cari Buah-buahan atau Sayuran" aria-label="cari" aria-describedby="cari" required>
 				<div class="input-group-append">
 					<button class="btn btn-outline-secondary" type="submit" id="cari">Cari</button>
 				</div>
