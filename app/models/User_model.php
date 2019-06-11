@@ -28,6 +28,14 @@ class User_model
 		return $this->db->single();
 	}
 
+	public function lupa($data)
+	{
+		$query = "SELECT * FROM users WHERE email = :email";
+		$this->db->query($query);
+		$this->db->bind('email', $data);
+		return $this->db->single();
+	}
+
 	public function getUserByid($id)
 	{
 		$query = "SELECT * FROM users WHERE id = :id";

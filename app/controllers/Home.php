@@ -74,7 +74,7 @@ class Home extends Controller
 
     public function lupa()
     {
-        if ($this->model('User_model')->getUserByEmail($_POST['emaill']) > 0) {
+        if ($this->model('User_model')->lupa($_POST['emaill']) > 0) {
             Flasher::setFlash('Berhasil', 'Silahkan Cek Email', 'success');
             header('Location: ' . BASEURL);
             exit;

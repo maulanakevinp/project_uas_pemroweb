@@ -91,7 +91,7 @@
 					<div class="modal-body">
 						<div class="form-group">
 							<label for="email">Email</label>
-							<input type="text" class="form-control" id="emaill" name="emaill">
+							<input type="email" class="form-control" id="emaill" name="emaill">
 						</div>
 					</div>
 
