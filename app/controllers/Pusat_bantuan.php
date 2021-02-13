@@ -1,6 +1,6 @@
 <?php
 
-class Pusat_bantuan extends Controller
+class pusat_bantuan extends Controller
 {
     public function index()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Panenku extends Controller
+class panenku extends Controller
 {
     public function index()
     {
@@ -51,7 +51,6 @@ class Panenku extends Controller
             $this->view('panenku/detail', $data);
             $this->view('templates/footer');
         } else {
-
             $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
             $data['panenku'] = $this->model('Barang_model')->getBarangByid($id);
             $this->view('templates/header', $data);

@@ -1,6 +1,6 @@
 <?php
 
-class Pengaturan extends Controller
+class pengaturan extends Controller
 {
     public function index()
     {

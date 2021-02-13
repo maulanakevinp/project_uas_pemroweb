@@ -1,6 +1,6 @@
 <?php
 
-class Profil extends Controller
+class profil extends Controller
 {
     public function index()
     {
@@ -42,7 +42,7 @@ class Profil extends Controller
             } else {
                 $data['judul'] = 'Toko Jual Beli Hasil Panen Online Lengkap | Manenin';
                 $data['penjual']['created_at'] = $this->tgl_indo($data['penjual']['created_at']);
-                $this->view('templates/header');
+                $this->view('templates/header', $data);
                 $this->view('profil/user', $data);
                 $this->view('templates/footer');
             }

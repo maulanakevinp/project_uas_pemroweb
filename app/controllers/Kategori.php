@@ -1,6 +1,6 @@
 <?php
 
-class Kategori extends Controller
+class kategori extends Controller
 {
 
     public function cari()

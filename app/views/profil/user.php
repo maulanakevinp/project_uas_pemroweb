@@ -5,8 +5,8 @@
             <div class="mb-3" style="width: 100%; height: 200px; background:url('<?= BASEURL ?>/assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg'); background-size: 100% 200px">
                 <img src="<?= BASEURL ?>/app/models/cover/<?= $data['penjual']['cover'] ?>" alt="" width="100%" height="100%">
             </div>
-            <div class="float-left mr-3 rounded-circle" style="width: 200px; height: 200px;  background:url('<?= BASEURL ?> /assets/img/icon/5925094_4_256x256_1495095625.png'); background-size: 200px 200px"">
-                <img class=" rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['penjual']['foto'] ?>" alt="" width="100%" height="100%">
+            <div class="float-left mr-3 rounded-circle">
+                <img class=" rounded-circle" src="<?= $data['penjual']['foto'] ?  BASEURL . '/app/models/foto/' . $data['penjual']['foto'] : BASEURL . '/assets/img/icon/noavatar.png' ?>" alt="Foto Profil" width="100px" style="max-height: 130px; object-fit: cover;">
             </div>
             <h5 class="card-title "><?= $data['penjual']['nama'] ?></h5>
             Email : <?= $data['penjual']['email'] ?> <br>

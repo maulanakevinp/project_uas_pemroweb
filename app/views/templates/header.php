@@ -4,7 +4,7 @@
 <head>
 	<title><?= $data['judul']; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/assets/css/bootstrap.css">
-	<link rel="shortcut icon" href="<?= BASEURL ?>/assets/img/logo/logo-manen.in.jpg">
+	<link rel="shortcut icon" href="<?= BASEURL ?>/assets/img/logo/logo.png">
 
 </head>
 

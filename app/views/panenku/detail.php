@@ -55,7 +55,6 @@
                     <p><?= $data['panenku']['deskripsi'] ?></p>
                 </div>
             </div>
-
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card ">
@@ -63,7 +62,7 @@
                     Penjual
                 </h5>
                 <div class="card-body text-center">
-                    <img class="rounded-circle" src="<?= BASEURL ?>/app/models/foto/<?= $data['panenku']['foto_user'] ?>" alt="" width="200px" height="200px">
+                    <img class="rounded-circle" src="<?= $data['panenku']['foto_user'] ?  BASEURL . '/app/models/foto/' . $data['panenku']['foto_user'] : BASEURL . '/assets/img/icon/noavatar.png' ?>" alt="Foto Profil" width="200px" style="max-height: 200px; object-fit: cover;">
                     <h5 class="mt-3"><?= $data['panenku']['nama_user'] ?></h5>
                     <?= $data['panenku']['email'] ?> <br>
                     <?= $data['panenku']['nomor_telepon'] ?> <br>
