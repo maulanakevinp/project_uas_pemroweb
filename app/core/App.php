@@ -9,6 +9,7 @@ class App
     public function __construct()
     {
         $url = $this->parseURL();
+<<<<<<< HEAD
 
         if (!empty($url)) {
             //controller
@@ -20,6 +21,20 @@ class App
         
         require_once './app/controllers/'. $this->controller. '.php';
         $this->controller = new $this->controller;
+=======
+
+        if (!empty($url)) {
+            //controller
+            if (file_exists('./app/controllers/'. $url[0]. '.php')) {
+                $this->controller = $url[0];
+                unset($url[0]);
+            }
+        }
+        
+        require_once './app/controllers/'. $this->controller. '.php';
+        $this->controller = new $this->controller;
+
+>>>>>>> 02462938b3fafb14970f3617936bbb8da04d75ba
 
         if (!empty($url)) {
             //method
