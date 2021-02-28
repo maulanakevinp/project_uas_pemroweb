@@ -12,31 +12,31 @@
                     <div id="foto" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner text-center">
                             <div class="carousel-item active">
-                                <img class="mw-100 mb-3" src="<?= BASEURL ?>/app/models/barang/<?= $data['panenku']['foto1'] ?>" alt="">
+                                <img class="mw-100 mb-3" src="<?= BASEURL ?>app/models/barang/<?= $data['panenku']['foto1'] ?>" alt="">
                             </div>
                             <?php if (!empty($data['panenku']['foto2'])) { ?>
                                 <div class="carousel-item">
-                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>/app/models/barang/<?= $data['panenku']['foto2'] ?>" alt="">
+                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>app/models/barang/<?= $data['panenku']['foto2'] ?>" alt="">
                                 </div>
                             <?php } ?>
                             <?php if (!empty($data['panenku']['foto3'])) { ?>
                                 <div class="carousel-item">
-                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>/app/models/barang/<?= $data['panenku']['foto3'] ?>" alt="">
+                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>app/models/barang/<?= $data['panenku']['foto3'] ?>" alt="">
                                 </div>
                             <?php } ?>
                             <?php if (!empty($data['panenku']['foto4'])) { ?>
                                 <div class="carousel-item">
-                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>/app/models/barang/<?= $data['panenku']['foto4'] ?>" alt="">
+                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>app/models/barang/<?= $data['panenku']['foto4'] ?>" alt="">
                                 </div>
                             <?php } ?>
                             <?php if (!empty($data['panenku']['foto5'])) { ?>
                                 <div class="carousel-item">
-                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>/app/models/barang/<?= $data['panenku']['foto5'] ?>" alt="">
+                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>app/models/barang/<?= $data['panenku']['foto5'] ?>" alt="">
                                 </div>
                             <?php } ?>
                             <?php if (!empty($data['panenku']['foto6'])) { ?>
                                 <div class="carousel-item">
-                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>/app/models/barang/<?= $data['panenku']['foto6'] ?>" alt="">
+                                    <img class="mw-100 mb-3" src="<?= BASEURL ?>app/models/barang/<?= $data['panenku']['foto6'] ?>" alt="">
                                 </div>
                             <?php } ?>
                         </div>
@@ -62,7 +62,7 @@
                     Penjual
                 </h5>
                 <div class="card-body text-center">
-                    <img class="rounded-circle" src="<?= $data['panenku']['foto_user'] ?  BASEURL . '/app/models/foto/' . $data['panenku']['foto_user'] : BASEURL . '/assets/img/icon/noavatar.png' ?>" alt="Foto Profil" width="200px" style="max-height: 200px; object-fit: cover;">
+                    <img class="rounded-circle" src="<?= $data['panenku']['foto_user'] ?  BASEURL . 'app/models/foto/' . $data['panenku']['foto_user'] : BASEURL . 'assets/img/icon/noavatar.png' ?>" alt="Foto Profil" width="200px" style="max-height: 200px; object-fit: cover;">
                     <h5 class="mt-3"><?= $data['panenku']['nama_user'] ?></h5>
                     <?= $data['panenku']['email'] ?> <br>
                     <?= $data['panenku']['nomor_telepon'] ?> <br>
@@ -70,7 +70,7 @@
                         Member sejak <?= $data['panenku']['created_at_user'] ?> <br>
                         Terakhir masuk <?= $data['panenku']['updated_at_user'] ?>
                     </p>
-                    <a href="<?= BASEURL ?>/profil/user/<?= $data['panenku']['id_user'] ?>" class="btn btn-outline-primary">Lihat Profil</a>
+                    <a href="<?= BASEURL ?>profil/user/<?= $data['panenku']['id_user'] ?>" class="btn btn-outline-primary">Lihat Profil</a>
                 </div>
             </div>
 

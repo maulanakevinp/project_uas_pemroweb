@@ -4,7 +4,7 @@
             Tambah Panenku
         </h5>
         <ul class="list-group list-group-flush">
-            <form action="<?= BASEURL ?>/panenku/tambahPanenku" enctype="multipart/form-data" method="post">
+            <form action="<?= BASEURL ?>panenku/tambahPanenku" enctype="multipart/form-data" method="post">
                 <li class="list-group-item">
 
                     <div class="form-row">

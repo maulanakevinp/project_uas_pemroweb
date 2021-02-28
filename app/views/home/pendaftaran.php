@@ -2,7 +2,7 @@
     <div class="card">
         <h5 class="card-header">Pendaftaran</h5>
         <div class="card-body">
-            <form id="form" action="<?= BASEURL ?>/home/daftar" method="POST" enctype="multipart/form-data">
+            <form id="form" action="<?= BASEURL ?>home/daftar" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" class="form-control" id="nama" name="nama" placeholder="Maulana Kevin Pradana" required>

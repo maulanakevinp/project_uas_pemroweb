@@ -3,8 +3,8 @@
 
 <head>
 	<title><?= $data['judul']; ?></title>
-	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/assets/css/bootstrap.css">
-	<link rel="shortcut icon" href="<?= BASEURL ?>/assets/img/logo/logo.png">
+	<link rel="stylesheet" type="text/css" href="<?= BASEURL ?>assets/css/bootstrap.css">
+	<link rel="shortcut icon" href="<?= BASEURL ?>assets/img/logo/logo.png">
 
 </head>
 
@@ -13,11 +13,11 @@
 		<h5 class="p-2 font-weight-normal"><a href="<?= BASEURL ?>" class="nav-link">Manenin</a></h5>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
 			<span>
-				<img class="btn btn-light" src="<?= BASEURL ?>/assets/img/icon/icons8_menu_filled_30px.png" alt="">
+				<img class="btn btn-light" src="<?= BASEURL ?>assets/img/icon/icons8_menu_filled_30px.png" alt="">
 			</span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbars">
-			<form id="cari" action="<?= BASEURL ?>/kategori/cari" class="input-group p-2" method="POST">
+			<form id="cari" action="<?= BASEURL ?>kategori/cari" class="input-group p-2" method="POST">
 				<input type="text" name="cari" class="form-control" autocomplete="off" placeholder="Cari Buah-buahan atau Sayuran" aria-label="cari" aria-describedby="cari" required>
 				<div class="input-group-append">
 					<button class="btn btn-outline-secondary" type="submit" id="cari">Cari</button>
@@ -27,9 +27,9 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:black">Kategori</a>
 					<div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="kategori">
-						<a class="dropdown-item" href="<?= BASEURL ?>/kategori/sayuran">Sayuran</a>
-						<a class="dropdown-item" href="<?= BASEURL ?>/kategori/buah_buahan">Buah-Buahan</a>
-						<a class="dropdown-item" href="<?= BASEURL ?>/kategori/beras_dan_biji_bijian">Beras dan Biji-Bijian</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>kategori/sayuran">Sayuran</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>kategori/buah_buahan">Buah-Buahan</a>
+						<a class="dropdown-item" href="<?= BASEURL ?>kategori/beras_dan_biji_bijian">Beras dan Biji-Bijian</a>
 					</div>
 				</li>
 			</ul>
@@ -45,7 +45,7 @@
 	<div class="modal fade" id="formMasuk" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<form id="form" action="<?= BASEURL; ?>/home/masuk" method="POST">
+				<form id="form" action="<?= BASEURL ?>home/masuk" method="POST">
 
 					<div class="modal-header">
 						<h5 class="modal-title">Masuk</h5>
@@ -63,7 +63,7 @@
 							<label for="password">Password</label>
 							<input type="password" class="form-control" id="password" name="password" required>
 						</div>
-						<a class="btn-link" href="<?= BASEURL ?>/home/pendaftaran">Tidak Punya Akun?</a>
+						<a class="btn-link" href="<?= BASEURL ?>home/pendaftaran">Tidak Punya Akun?</a>
 						<a class="btn-link float-right" href="" data-toggle="modal" data-target="#formLupa" data-dismiss="modal">Lupa Password?</a>
 					</div>
 
@@ -79,7 +79,7 @@
 	<div class="modal fade" id="formLupa" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<form id="form" action="<?= BASEURL; ?>/home/lupa" method="POST">
+				<form id="form" action="<?= BASEURL ?>home/lupa" method="POST">
 
 					<div class="modal-header">
 						<h5 class="modal-title">Lupa Pasword</h5>

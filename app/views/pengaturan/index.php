@@ -16,7 +16,7 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-ubah-detail-kontak" role="tabpanel" aria-labelledby="ubah-detail-kontak">
                     <div class="container mt-2">
-                        <form action="<?= BASEURL ?>/pengaturan/ubahDetailKontak" method="post">
+                        <form action="<?= BASEURL ?>pengaturan/ubahDetailKontak" method="post">
                             <div class="form-group">
                                 <label for="nama">Nama Lengkap</label>
                                 <input type="text" class="form-control" id="nama" name="nama" value="<?= $data['user']['nama'] ?>">
@@ -43,10 +43,10 @@
                 </div>
                 <div class="tab-pane fade" id="nav-ubah-foto-profil" role="tabpanel" aria-labelledby="ubah-foto-profil">
                     <div class="container mt-2">
-                        <form action="<?= BASEURL ?>/pengaturan/ubahFotoProfil" enctype="multipart/form-data" method="post">
+                        <form action="<?= BASEURL ?>pengaturan/ubahFotoProfil" enctype="multipart/form-data" method="post">
                             <center>
                                 <div class="mb-3 rounded-circle" style="width: 200px; height: 200px; background:url('<?= BASEURL ?> /assets/img/icon/5925094_4_256x256_1495095625.png'); background-size: 200px 200px">
-                                    <img class="rounded-circle" id="blah" src="<?= BASEURL ?>/app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
+                                    <img class="rounded-circle" id="blah" src="<?= BASEURL ?>app/models/foto/<?= $data['user']['foto'] ?>" alt="" width="100%" height="100%">
                                 </div>
                                 <div>
                                     <p>Upload foto profil anda untuk menambah nilai kepercayaan pembeli</p>
@@ -67,10 +67,10 @@
                 </div>
                 <div class="tab-pane fade" id="nav-ubah-cover-profil" role="tabpanel" aria-labelledby="ubah-cover-profil">
                     <div class="container mt-2">
-                        <form action="<?= BASEURL ?>/pengaturan/ubahCoverProfil" enctype="multipart/form-data" method="post">
+                        <form action="<?= BASEURL ?>pengaturan/ubahCoverProfil" enctype="multipart/form-data" method="post">
 
-                            <div class="mb-3 " style="width: 100%; height: 200px; background:url('<?= BASEURL ?>/assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg'); background-size: 100% 200px">
-                                <img src="<?= BASEURL ?>/app/models/cover/<?= $data['user']['cover'] ?>" alt="" width="100%" height="200px">
+                            <div class="mb-3 " style="width: 100%; height: 200px; background:url('<?= BASEURL ?>assets/img/picture/abstract-green-wallpapers-hd-desktop-and-mobile-backgrounds.jpg'); background-size: 100% 200px">
+                                <img src="<?= BASEURL ?>app/models/cover/<?= $data['user']['cover'] ?>" alt="" width="100%" height="200px">
                             </div>
                             <div>
                                 <p>Upload cover profil anda untuk menambah nilai kepercayaan pembeli</p>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="tab-pane fade" id="nav-ubah-password" role="tabpanel" aria-labelledby="ubah-password">
                     <div class="container mt-2">
-                        <form action="<?= BASEURL ?>/pengaturan/ubahPassword" method="post">
+                        <form action="<?= BASEURL ?>pengaturan/ubahPassword" method="post">
                             <div class="form-group">
                                 <label for="password">Password Lama</label>
                                 <input type="password" class="form-control" id="passwordl" name="passwordl" value="">

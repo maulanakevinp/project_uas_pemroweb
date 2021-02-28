@@ -2,13 +2,13 @@
     <div id="manenin" class="carousel slide" data-ride="carousel" style="margin-top: 150px;margin-bottom: 20px">
         <div class="carousel-inner text-center">
             <div class="carousel-item active">
-                <img class="mw-100" src="<?= BASEURL ?>/assets/img/picture/sayuran_20180619_101443.jpg">
+                <img class="mw-100" src="<?= BASEURL ?>assets/img/picture/sayuran_20180619_101443.jpg">
             </div>
             <div class="carousel-item">
-                <img class="mw-100" src="<?= BASEURL ?>/assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="">
+                <img class="mw-100" src="<?= BASEURL ?>assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="">
             </div>
             <div class="carousel-item">
-                <img class="mw-100" src="<?= BASEURL ?>/assets/img/picture/beras dan biji bijian.jpg" alt="">
+                <img class="mw-100" src="<?= BASEURL ?>assets/img/picture/beras dan biji bijian.jpg" alt="">
             </div>
         </div>
     </div>
@@ -25,13 +25,13 @@
                 <div id="Sayuran" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="<?= BASEURL ?>/assets/img/picture/sayuran_20180619_101443.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/sayuran_20180619_101443.jpg" alt="" width="300px" height="200px">
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= BASEURL ?>/assets/img/picture/cucumbers-849269__340.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/cucumbers-849269__340.jpg" alt="" width="300px" height="200px">
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= BASEURL ?>/assets/img/picture/carrots-2387394__340.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/carrots-2387394__340.jpg" alt="" width="300px" height="200px">
                         </div>
                     </div>
                 </div>
@@ -46,13 +46,13 @@
                 <div id="Buah-Buahan" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="<?= BASEURL ?>/assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/055639900_1519639673-MinuteMaid_04.jpg" alt="" width="300px" height="200px">
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= BASEURL ?>/assets/img/picture/leci.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/leci.jpg" alt="" width="300px" height="200px">
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= BASEURL ?>/assets/img/picture/nanas.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/nanas.jpg" alt="" width="300px" height="200px">
                         </div>
                     </div>
                 </div>
@@ -67,13 +67,13 @@
                 <div id="Beras-dan-Biji-Bijian" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="<?= BASEURL ?>/assets/img/picture/beras dan biji bijian.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/beras dan biji bijian.jpg" alt="" width="300px" height="200px">
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= BASEURL ?>/assets/img/picture/images.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/images.jpg" alt="" width="300px" height="200px">
                         </div>
                         <div class="carousel-item">
-                            <img src="<?= BASEURL ?>/assets/img/picture/download.jpg" alt="" width="300px" height="200px">
+                            <img src="<?= BASEURL ?>assets/img/picture/download.jpg" alt="" width="300px" height="200px">
                         </div>
                     </div>
                 </div>
