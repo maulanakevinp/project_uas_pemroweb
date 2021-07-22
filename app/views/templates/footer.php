@@ -19,9 +19,9 @@
 			<div class="col-6 col-md">
 				<h5>Social Media</h5>
 				<ul class="list-unstyled text-small">
-					<a class="text-muted" href="https:/www.facebook.com/"><img src="<?= BASEURL ?>assets/img/icon/icons8_Facebook_Old_50px.png" alt=""></a>
-					<a class="text-muted" href="https:/www.instagram.com/"><img src="<?= BASEURL ?>assets/img/icon/icons8_instagram_new_50px.png" alt=""></a>
-					<a class="text-muted" href="https:/www.twitter.com"><img src="<?= BASEURL ?>assets/img/icon/icons8_twitter_50px.png" alt=""></a>
+					<a class="text-muted" href="https://www.facebook.com/"><img src="<?= BASEURL ?>assets/img/icon/icons8_Facebook_Old_50px.png" alt=""></a>
+					<a class="text-muted" href="https://www.instagram.com/"><img src="<?= BASEURL ?>assets/img/icon/icons8_instagram_new_50px.png" alt=""></a>
+					<a class="text-muted" href="https://www.twitter.com"><img src="<?= BASEURL ?>assets/img/icon/icons8_twitter_50px.png" alt=""></a>
 				</ul>
 			</div>
 			<div class="col-6 col-md">
